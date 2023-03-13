@@ -396,13 +396,15 @@ function winner(){
         document.querySelector(".boxes2").style.display = "block"
         pickBox = 10;
         round.push(1)
+        level.innerHTML= "Level: 2"
         result = [];
-      
+        score.innerHTML = `Score: 0`
         
     }
 
     if(total < topScore){
-        alert("Better luck next time  ")
+        alert(document.querySelector(".result").innerHTML = "Better luck next time")
+        level.style.paddingTop ="100px"
         document.querySelector(".total").innerHTML = `Score: ${total}`
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
@@ -413,7 +415,8 @@ function winner(){
     }
 
     if(total === topScore){
-        alert("Draw  ")
+        alert(document.querySelector(".result").innerHTML = "Whoops Draw!!!")
+  
         document.querySelector(".total").innerHTML = `Score: ${total}`
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
@@ -461,7 +464,9 @@ function level2(){
     const total = result.reduce((acc, curr)=> acc+curr, 0);
 
     if(total > topScore){
-        alert("you are the winner ")
+        alert(document.querySelector(".result").innerHTML = "Congratulation you are the winner")
+      
+        level.style.paddingTop ="100px"
         document.querySelector(".total").innerHTML = `Score: ${total}`
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
@@ -472,7 +477,9 @@ function level2(){
     }
 
     if(total < topScore){
-        alert("Better luck next time  ")
+        alert(document.querySelector(".result").innerHTML = "Better luck next time")
+        level.innerHTML = "Level: 2"
+    
         document.querySelector(".total").innerHTML = `Score: ${total}`
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
@@ -483,7 +490,9 @@ function level2(){
     }
 
     if(total === topScore){
-        alert("Draw  ")
+        alert(document.querySelector(".result").innerHTML = "Better luck next time")
+        level.innerHTML = "Level: 2"
+        
         document.querySelector(".total").innerHTML = `Score: ${total}`
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
