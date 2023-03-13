@@ -408,6 +408,7 @@ function winner(){
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
         document.querySelector(".mainDiv1").className = "mainDiv2";
+        document.querySelector(".abra").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
     }
 
@@ -418,9 +419,10 @@ function winner(){
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
         document.querySelector(".mainDiv1").className = "mainDiv2";
+        document.querySelector(".abra").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
     }
-    start()
+    
 console.log(round)
 console.log(result)
 console.log(count)
@@ -461,25 +463,36 @@ function level2(){
     if(total > topScore){
         alert("you are the winner ")
         document.querySelector(".total").innerHTML = `Score: ${total}`
-       
+        document.querySelector(".endBtn").style.marginTop = "150px"
+        document.querySelector(".heading").style.display = "none"
+        document.querySelector(".divBox").style.display = "none"
+        document.querySelector(".mainDiv1").className = "mainDiv2";
+        document.querySelector(".abra").style.display = "none"
+        document.querySelector("body").style.backgroundColor ="cadetblue"
     }
 
     if(total < topScore){
         alert("Better luck next time  ")
         document.querySelector(".total").innerHTML = `Score: ${total}`
-      
+        document.querySelector(".endBtn").style.marginTop = "150px"
+        document.querySelector(".heading").style.display = "none"
+        document.querySelector(".divBox").style.display = "none"
+        document.querySelector(".mainDiv1").className = "mainDiv2";
+        document.querySelector(".abra").style.display = "none"
+        document.querySelector("body").style.backgroundColor ="cadetblue"
     }
 
     if(total === topScore){
         alert("Draw  ")
         document.querySelector(".total").innerHTML = `Score: ${total}`
-      
+        document.querySelector(".endBtn").style.marginTop = "150px"
+        document.querySelector(".heading").style.display = "none"
+        document.querySelector(".divBox").style.display = "none"
+        document.querySelector(".mainDiv1").className = "mainDiv2";
+        document.querySelector(".abra").style.display = "none"
+        document.querySelector("body").style.backgroundColor ="cadetblue"
     }
-    document.querySelector(".endBtn").style.marginTop = "150px"
-    document.querySelector(".heading").style.display = "none"
-    document.querySelector(".divBox").style.display = "none"
-    document.querySelector(".mainDiv1").className = "mainDiv2";
-    document.querySelector("body").style.backgroundColor ="cadetblue"
+   
   console.log("first")
 console.log(result)
 console.log(count)

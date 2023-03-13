@@ -37,7 +37,7 @@ body{
     background-size: 100px;
     display: block;
     flex-direction: column;
-    padding-top: 125px;
+    padding-top: 100px;
     text-align: center;
     color:floralwhite;
 }
@@ -160,7 +160,7 @@ footer {
 
   .scoring{
     display: flex;
-    padding-top: 10px;
+    justify-content: center;
    }
 
 .total, .round{
