@@ -14,7 +14,7 @@ const score = document.querySelector(".total");
 const level = document.querySelector(".round");
 const mainDiv = document.querySelector(".mainDiv");
 const divBox = document.querySelector(".divBox");
-const play = document.querySelector(".play");
+const play = document.querySelector(".start");
 var pickBox = 7;
 let result= []
 var round = [];
@@ -25,8 +25,9 @@ function start(){
     score.innerHTML = `Score: ${total}`;
     level.innerHTML = `Level: ${game}`
    mainDiv.className = "mainDiv1"
-   divBox.style.display = "initial"
+   divBox.style.display = "initial";
    play.style.display = "none"
+   
 }
 
 play.addEventListener("click", start)

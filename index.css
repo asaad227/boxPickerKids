@@ -1,9 +1,32 @@
 body{
     background-color: darkgrey;
 }
+
+.start {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+  }
+
+  .endBtn{
+    padding-top: 50px;
+  }
+
+  .play, .gameName{
+    margin: 5px;
+  }
+
+  .play:hover,.box1:hover,.box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover, .box7:hover, .box8:hover, .box9:hover, .box10:hover, .box11:hover, .box12:hover{
+    background-color: rgb(202, 211, 135);
+    color: rgb(94, 72, 72);
+  }
 .mainDiv1{
-    display: initial;
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   
 }
 
@@ -68,6 +91,7 @@ body{
     border: none;
     margin: 5px;
     border-radius: 5px;
+    font-size: large;
     font-weight: bold;
    background-color: rgb(125, 132, 75);
     cursor: pointer;
@@ -77,39 +101,6 @@ body{
     display: none;
     font-style: oblique;
 }
-.nameIn, .nameIn2, .roundIn{
-    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
-    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    padding: 5px;
-}
-.nameIn:focus, .nameIn2:focus, .roundIn:focus{
-    background-color: rgb(219, 219, 166);
-    color: rgb(93, 35, 35);
-    
-}
-.reset,.roundSubmit, .roundSubmit2{
-    display: initial;
-    width: 100px;
-    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
-    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    margin: 10px;
-    background-color: rgb(42, 165, 79);
-    color: beige;
-    
-}
-.reset{
-    background-color: rgba(86, 53, 18, 0.746);
-}
-
-
-.player2Details{
-    display: none;
-}
-
-
-
 
 .reload,.dataStore{
     box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
@@ -125,23 +116,12 @@ body{
     cursor: pointer;
 }
 
-.roundIn2{
-    display: none;
-}
-
 .logo{
     border-radius: 5px;
+  
     width: 25px;
     height: 25px;
 }
-
-
-
-.roundSubmit2, .nameIn2, .player2Name{
-    display: none;
-}
-
-
 footer {
     color: #fff;
     padding: 20px;
@@ -150,7 +130,8 @@ footer {
   .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
   }
   
   .container p {
@@ -182,10 +163,11 @@ footer {
   }
   
   @media only screen and (max-width: 767px){
-    
+   
         .logo{
             border-radius: 5px;
-            padding-left: 0px;
+            padding-top: 50px;
+            padding-left: 150px;
             width: 25px;
             height: 25px;
         }
