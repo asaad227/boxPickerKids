@@ -159,10 +159,19 @@ footer {
   }
 
   .scoring{
-    padding-top: 100px;
-  }
+    display: flex;
+    padding-top: 10px;
+   }
+
+.total, .round{
+    padding-left: 20px;
+}
+.abra{
+    padding-left: 50px;
+}
   
   @media only screen and (max-width: 767px){
+   
    
         .logo{
             border-radius: 5px;
