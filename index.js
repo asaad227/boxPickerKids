@@ -147,6 +147,39 @@ document.addEventListener("click", function(event){
                 btn9.disabled = true;
             }
         }
+
+        if(event.target === btn10){
+            if(random === randomBox){
+                result.push(10)
+                btn10.className = "boxG";
+                btn10.disabled = true;
+            }else{
+                btn10.className = "boxP";
+                btn10.disabled = true;
+            }
+        }
+
+        if(event.target === btn11){
+            if(random === randomBox){
+                result.push(10)
+                btn11.className = "boxG";
+                btn11.disabled = true;
+            }else{
+                btn11.className = "boxP";
+                btn11.disabled = true;
+            }
+        }
+
+        if(event.target === btn12){
+            if(random === randomBox){
+                result.push(10)
+                btn12.className = "boxG";
+                btn12.disabled = true;
+            }else{
+                btn12.className = "boxP";
+                btn12.disabled = true;
+            }
+        }
       
     }
 
