@@ -9,13 +9,17 @@ body{
     align-items: center;
     padding-top: 100px;
   }
-
+ 
   .endBtn{
     padding-top: 50px;
   }
 
   .play, .gameName{
     margin: 5px;
+  }
+
+  .start1{
+    display: none;
   }
 
   .play:hover,.box1:hover,.box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover, .box7:hover, .box8:hover, .box9:hover, .box10:hover, .box11:hover, .box12:hover{
