@@ -16,7 +16,8 @@ const mainDiv = document.querySelector(".mainDiv");
 const divBox = document.querySelector(".divBox");
 const play = document.querySelector(".start");
 const remainingBox = document.querySelector(".remainingBox");
-const scoreDisplay = document.querySelector(".scoring")
+const scoreDisplay = document.querySelector(".scoring");
+const abra = document.querySelector(".abra")
 var pickBox = 7;
 let result= []
 var round = [];
@@ -28,7 +29,8 @@ function start(){
     level.innerHTML = `Level: ${game}`
    mainDiv.className = "mainDiv1"
    divBox.style.display = "initial";
-   play.style.display = "none"
+   play.style.display = "none";
+   abra.className = "abra1"
    
 }
 
@@ -192,7 +194,7 @@ function winner(){
     var total = result.reduce((acc, curr)=> acc+curr, 0);
 
     if(total > topScore){
-        alert(`you are the winner ${total}`)
+        alert(`Well done lets play next round!!`)
         resetTable()
         document.querySelector(".boxes2").style.display = "block"
         pickBox = 10;
@@ -215,7 +217,7 @@ function winner(){
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
         document.querySelector(".mainDiv1").className = "mainDiv2";
-        document.querySelector(".abra").style.display = "none"
+        document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
     }
 
@@ -229,7 +231,7 @@ function winner(){
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
         document.querySelector(".mainDiv1").className = "mainDiv2";
-        document.querySelector(".abra").style.display = "none"
+        document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
     }
     
@@ -282,7 +284,7 @@ function resetTable(){
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
         document.querySelector(".mainDiv1").className = "mainDiv2";
-        document.querySelector(".abra").style.display = "none"
+        document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
     }
 
@@ -297,7 +299,7 @@ function resetTable(){
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
         document.querySelector(".mainDiv1").className = "mainDiv2";
-        document.querySelector(".abra").style.display = "none"
+        document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
     }
 
@@ -312,7 +314,7 @@ function resetTable(){
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
         document.querySelector(".mainDiv1").className = "mainDiv2";
-        document.querySelector(".abra").style.display = "none"
+        document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
     }
    
