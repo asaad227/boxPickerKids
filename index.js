@@ -34,6 +34,7 @@ const easy = document.querySelector(".easy");
 const medium = document.querySelector(".medium");
 const hard = document.querySelector(".hard");
 const modeDisplay = document.querySelector(".modeDisplay");
+const container = document.querySelector(".container")
 // create box pick option for the player
 var pickBox = 9;
 let result= [];
@@ -82,7 +83,8 @@ document.addEventListener("click", function(event){
        divBox.style.display = "initial";
        abra.style.display = "none";
        start.className = "start1";
-       modeDisplay.className= "modeChange"
+       modeDisplay.className= "modeChange";
+       container.className = "containerChnage"
       }
 
       if(event.target === reload){
