@@ -47,7 +47,10 @@ var count = []
 document.addEventListener("click", function(event){
       if(event.target === play){
         const total = result.reduce((acc, curr)=> acc + curr, 0);
-        const game = round.length + 1
+        const game = round.length + 1;
+        const audio = new Audio;
+        audio.src ="./Audio/ES_Laugh Chipmunk - SFX Producer.mp3"
+        audio.play()
         score.innerHTML = `Score: ${total}`;
         level.innerHTML = `Level: ${game}`;
         //change class name so change display according to page need
@@ -83,6 +86,9 @@ document.addEventListener("click", function(event){
             remender = pickBox - count.length;
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
+                const audio = new Audio;
+                audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
+                audio.play()
                 // if this condition meet it will update result score and button class
                 result.push(10)
                 btn1.className = "boxG";
@@ -100,6 +106,9 @@ document.addEventListener("click", function(event){
             remender = pickBox - count.length;
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
+                const audio = new Audio;
+                audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
+                audio.play()
                 result.push(10)
                 btn2.className = "boxG";
                 btn2.disabled = true;
@@ -113,6 +122,9 @@ document.addEventListener("click", function(event){
             remender = pickBox - count.length;
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
+                const audio = new Audio;
+                audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
+                audio.play()
                 result.push(10)
                 btn3.className = "boxG";
                 btn3.disabled = true;
@@ -127,6 +139,9 @@ document.addEventListener("click", function(event){
             remender = pickBox - count.length;
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
+                const audio = new Audio;
+                audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
+                audio.play()
                 result.push(10)
                 btn4.className = "boxG";
                 btn4.disabled = true;
@@ -141,6 +156,9 @@ document.addEventListener("click", function(event){
             remender = pickBox - count.length;
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
+                const audio = new Audio;
+                audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
+                audio.play()
                 result.push(10)
                 btn5.className = "boxG";
                 btn5.disabled = true;
@@ -155,6 +173,9 @@ document.addEventListener("click", function(event){
             remender = pickBox - count.length;
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
+                const audio = new Audio;
+                audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
+                audio.play()
                 result.push(10)
                 btn6.className = "boxG";
                 btn6.disabled = true;
@@ -169,6 +190,9 @@ document.addEventListener("click", function(event){
             remender = pickBox - count.length;
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
+                const audio = new Audio;
+                audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
+                audio.play()
                 result.push(10)
                 btn7.className = "boxG";
                 btn7.disabled = true;
@@ -183,6 +207,9 @@ document.addEventListener("click", function(event){
             remender = pickBox - count.length;
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
+                const audio = new Audio;
+                audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
+                audio.play()
                 result.push(10)
                 btn8.className = "boxG";
                 btn8.disabled = true;
@@ -197,6 +224,9 @@ document.addEventListener("click", function(event){
             remender = pickBox - count.length;
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
+                const audio = new Audio;
+                audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
+                audio.play()
                 result.push(10)
                 btn9.className = "boxG";
                 btn9.disabled = true;
@@ -211,6 +241,9 @@ document.addEventListener("click", function(event){
             remender = pickBox - count.length;
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
+                const audio = new Audio;
+                audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
+                audio.play()
                 result.push(10)
                 btn10.className = "boxG";
                 btn10.disabled = true;
@@ -225,6 +258,9 @@ document.addEventListener("click", function(event){
             remender = pickBox - count.length;
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
+                const audio = new Audio;
+                audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
+                audio.play()
                 result.push(10)
                 btn11.className = "boxG";
                 btn11.disabled = true;
@@ -239,6 +275,9 @@ document.addEventListener("click", function(event){
             remender = pickBox - count.length;
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
+                const audio = new Audio;
+                audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
+                audio.play()
                 result.push(10)
                 btn12.className = "boxG";
                 btn12.disabled = true;
