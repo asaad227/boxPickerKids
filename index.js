@@ -95,6 +95,9 @@ document.addEventListener("click", function(event){
                 //disabled as soon as player this button, so no second pick
                 btn1.disabled = true;
             }else{
+                const audio = new Audio;
+                audio.src ="./Audio/mixkit-game-click-1114.wav"
+                audio.play()
                 btn1.className = "boxP";
                 btn1.disabled = true;
             }
@@ -113,6 +116,9 @@ document.addEventListener("click", function(event){
                 btn2.className = "boxG";
                 btn2.disabled = true;
             }else{
+                const audio = new Audio;
+                audio.src ="./Audio/mixkit-game-click-1114.wav"
+                audio.play()
                 btn2.className = "boxP";
                 btn2.disabled = true;
             }
@@ -129,6 +135,9 @@ document.addEventListener("click", function(event){
                 btn3.className = "boxG";
                 btn3.disabled = true;
             }else{
+                const audio = new Audio;
+                audio.src ="./Audio/mixkit-game-click-1114.wav"
+                audio.play()
                 btn3.className = "boxP";
                 btn3.disabled = true;
             }
@@ -146,6 +155,9 @@ document.addEventListener("click", function(event){
                 btn4.className = "boxG";
                 btn4.disabled = true;
             }else{
+                const audio = new Audio;
+                audio.src ="./Audio/mixkit-game-click-1114.wav"
+                audio.play()
                 btn4.className = "boxP";
                 btn4.disabled = true;
             }
@@ -163,6 +175,9 @@ document.addEventListener("click", function(event){
                 btn5.className = "boxG";
                 btn5.disabled = true;
             }else{
+                const audio = new Audio;
+                audio.src ="./Audio/mixkit-game-click-1114.wav"
+                audio.play()
                 btn5.className = "boxP";
                 btn5.disabled = true;
             }
@@ -180,6 +195,9 @@ document.addEventListener("click", function(event){
                 btn6.className = "boxG";
                 btn6.disabled = true;
             }else{
+                const audio = new Audio;
+                audio.src ="./Audio/mixkit-game-click-1114.wav"
+                audio.play()
                 btn6.className = "boxP";
                 btn6.disabled = true;
             }
@@ -197,6 +215,9 @@ document.addEventListener("click", function(event){
                 btn7.className = "boxG";
                 btn7.disabled = true;
             }else{
+                const audio = new Audio;
+                audio.src ="./Audio/mixkit-game-click-1114.wav"
+                audio.play()
                 btn7.className = "boxP";
                 btn7.disabled = true;
             }
@@ -214,6 +235,9 @@ document.addEventListener("click", function(event){
                 btn8.className = "boxG";
                 btn8.disabled = true;
             }else{
+                const audio = new Audio;
+                audio.src ="./Audio/mixkit-game-click-1114.wav"
+                audio.play()
                 btn8.className = "boxP";
                 btn8.disabled = true;
             }
@@ -231,6 +255,9 @@ document.addEventListener("click", function(event){
                 btn9.className = "boxG";
                 btn9.disabled = true;
             }else{
+                const audio = new Audio;
+                audio.src ="./Audio/mixkit-game-click-1114.wav"
+                audio.play()
                 btn9.className = "boxP";
                 btn9.disabled = true;
             }
@@ -248,6 +275,9 @@ document.addEventListener("click", function(event){
                 btn10.className = "boxG";
                 btn10.disabled = true;
             }else{
+                const audio = new Audio;
+                audio.src ="./Audio/mixkit-game-click-1114.wav"
+                audio.play()
                 btn10.className = "boxP";
                 btn10.disabled = true;
             }
@@ -265,6 +295,9 @@ document.addEventListener("click", function(event){
                 btn11.className = "boxG";
                 btn11.disabled = true;
             }else{
+                const audio = new Audio;
+                audio.src ="./Audio/mixkit-game-click-1114.wav"
+                audio.play()
                 btn11.className = "boxP";
                 btn11.disabled = true;
             }
@@ -282,6 +315,9 @@ document.addEventListener("click", function(event){
                 btn12.className = "boxG";
                 btn12.disabled = true;
             }else{
+                const audio = new Audio;
+                audio.src ="./Audio/mixkit-game-click-1114.wav"
+                audio.play()
                 btn12.className = "boxP";
                 btn12.disabled = true;
             }
@@ -300,9 +336,13 @@ function winner(){
     var total = result.reduce((acc, curr)=> acc+curr, 0);
 
     if(total > topScore){
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-ethereal-fairy-win-sound-2019.wav"
+        audio.play()
         alert(`Well done lets play next round!!`)
         //run reset table for next level
         resetTable()
+        
         document.querySelector(".boxes2").style.display = "block"
         pickBox = 10;
         const remender = pickBox - count.length;
@@ -315,7 +355,11 @@ function winner(){
     }
 
     if(total < topScore){
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-circus-lose-2030.wav"
+        audio.play()
         alert(document.querySelector(".result").innerHTML = "Better luck next time")
+       
         level.style.display ="none"
         remainingBox.style.display = "none";
         scoreDisplay.className = "scoring1"
@@ -329,7 +373,11 @@ function winner(){
     }
 
     if(total === topScore){
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-circus-lose-2030.wav"
+        audio.play()
         alert(document.querySelector(".result").innerHTML = "Whoops Draw!!!")
+     
         level.style.display ="none";
         remainingBox.style.display = "none";
         scoreDisplay.className = "scoring1"
@@ -383,7 +431,11 @@ function resetTable(){
     const total = result.reduce((acc, curr)=> acc+curr, 0);
 
     if(total > topScore){
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-ethereal-fairy-win-sound-2019.wav"
+        audio.play()
         document.querySelector(".result").innerHTML = "Congratulation you are the winner"
+        
         level.style.display ="none"
         remainingBox.style.display = "none"
         scoreDisplay.className = "scoring1"
@@ -397,6 +449,9 @@ function resetTable(){
     }
 
     if(total < topScore){
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-circus-lose-2030.wav"
+        audio.play()
         document.querySelector(".result").innerHTML = "Better luck next time"
         level.style.display ="none"
         remainingBox.style.display = "none"
@@ -411,6 +466,9 @@ function resetTable(){
     }
 
     if(total === topScore){
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-circus-lose-2030.wav"
+        audio.play()
         document.querySelector(".result").innerHTML = "Better luck next time"
         level.style.display ="none"
         remainingBox.style.display = "none"
