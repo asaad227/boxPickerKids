@@ -70,7 +70,9 @@ document.addEventListener("click", function(event){
     remainingBox.innerHTML = `Pick left: ${remender }`
     const random = Math.floor(Math.random()*4);
     const randomBox = Math.floor(Math.random()*4)
-    if(count.length === pickBox){
+    //game will stop if player score more theb required score 
+    // as two level game so condition also made for all level 
+    if(count.length === pickBox || result.length >= 2 && round.length === 0|| result.length > 3 && round.length === 1){
        //nested codition to check round compeleted or not
         if(round.length > 0){
             level2()
