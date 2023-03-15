@@ -9,6 +9,32 @@ body{
     align-items: center;
     padding-top: 100px;
   }
+
+  .mode{
+    display: flex;
+    flex-direction: row;
+  }
+  .modeDisplay{
+    display: none;
+  }
+  .modeChange{
+    display: flex;
+    padding-top: 5px;
+  }
+  
+  .easy, .medium, .hard{
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    width: 75px;
+    height: 25px;
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: small;
+    font-weight: bold;
+   background-color: rgb(125, 132, 75);
+    cursor: pointer;
+  }
  
   .endBtn{
     padding-top: 50px;
