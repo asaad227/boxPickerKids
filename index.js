@@ -31,7 +31,7 @@ const find = document.querySelector(".find");
 const find1 = document.querySelector(".find1")
 const find2 = document.querySelector(".find2")
 // create box pick option for the player
-var pickBox = 7;
+var pickBox = 8;
 let result= [];
 var round = [];
 var count = [];
@@ -427,8 +427,8 @@ function winner(){
         resetTable()
         find.style.display = "none";
         find1.style.display = "inline"
-        document.querySelector(".boxes2").style.display = "block"
-        pickBox = 10;
+        document.querySelector(".boxes3").style.display = "none"
+        pickBox = 7;
         const remender = pickBox - count.length;
         remainingBox.innerHTML = `Pick left: ${remender}`
         round.push(1)
@@ -504,6 +504,12 @@ function resetTable(){
     btn11.disabled = false;
     btn12.className = "box12"
     btn12.disabled = false;
+    btn13.className = "box10"
+    btn13.disabled = false;
+    btn14.className = "box11"
+    btn14.disabled = false;
+    btn15.className = "box12"
+    btn15.disabled = false;
     // reset the counter for the round 
     count.length = 0; 
     
@@ -522,9 +528,9 @@ function resetTable(){
         resetTable()
         find1.style.display = "none";
         find2.style.display = "inline"
-        document.querySelector(".boxes2").style.display = "block"
-        document.querySelector(".boxes3").style.display = "block"
-        pickBox = 12;
+        document.querySelector(".boxes2").style.display = "none"
+        // document.querySelector(".boxes3").style.display = "block"
+        pickBox = 7;
         const remender = pickBox - count.length;
         remainingBox.innerHTML = `Pick left: ${remender}`
         round.push(1)
@@ -579,7 +585,6 @@ console.log(count)
     // set the score to beat
     const topScore = 30;
     total = result.reduce((acc, curr)=> acc+curr, 0);
-
     if(total > topScore){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-ethereal-fairy-win-sound-2019.wav"

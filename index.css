@@ -77,13 +77,13 @@ body{
   display: none;
 }
 
-.boxes{
+.boxes3, .boxes2, .boxes{
     display: block;
     gap: 1px;
 }
-.boxes2, .boxes3{
+/* .boxes2, .boxes{
     display: none;
-}
+} */
 .boxG{
     background-image: url(./gif/espeon.gif);
     background-size: 50px;
