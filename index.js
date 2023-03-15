@@ -10,6 +10,9 @@ const btn9 = document.querySelector(".box9");
 const btn10 = document.querySelector(".box10");
 const btn11 = document.querySelector(".box11");
 const btn12 = document.querySelector(".box12");
+const btn13 = document.querySelector(".box13");
+const btn14 = document.querySelector(".box14");
+const btn15 = document.querySelector(".box15");
 const score = document.querySelector(".total");
 const level = document.querySelector(".round");
 const mainDiv = document.querySelector(".mainDiv");
@@ -26,11 +29,13 @@ const abra1 = document.querySelector(".abra1");
 const start1 = document.querySelector(".start1");
 const find = document.querySelector(".find");
 const find1 = document.querySelector(".find1")
+const find2 = document.querySelector(".find2")
 // create box pick option for the player
 var pickBox = 7;
-let result= []
+let result= [];
 var round = [];
-var count = []
+var count = [];
+var total = 0;
 // function start(){
 //     const total = result.reduce((acc, curr)=> acc + curr, 0);
 //     const game = round.length + 1
@@ -74,15 +79,28 @@ document.addEventListener("click", function(event){
     const randomBox = Math.floor(Math.random()*3)
     //game will stop if player score more then required score 
     // as two level game so condition also made for all level 
-    if(count.length === pickBox || result.length >= 2 && round.length === 0|| result.length > 3 && round.length === 1){
+    if(count.length === pickBox || result.length >= 2 && round.length === 0|| result.length >= 3 && round.length === 1 ||result.length >= 4 && round.length === 2){
        //nested codition to check round compeleted or not
-        if(round.length > 0){
-            level2()
-           
-        }else{
+       if(round.length === 0){
+        console.log("round.length === 0", round.length)
         winner()
         resetTable()
-        }
+    }else{
+        if(round.length === 1){
+            console.log("round.length === 1", round.length)
+            level2()
+           }else{
+            if(round.length === 2 ){
+                console.log("round.length === 2", round.length)
+                level3()
+            }
+           }
+    }
+       
+       
+
+        
+
         
     }else{
         if(event.target === btn1 ){
@@ -327,6 +345,66 @@ document.addEventListener("click", function(event){
                 btn12.disabled = true;
             }
         }  
+
+        if(event.target === btn13){
+            count.push(1)
+            remender = pickBox - count.length;
+            remainingBox.innerHTML = `Pick left: ${remender }`
+            if(random === randomBox){
+                const audio = new Audio;
+                audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
+                audio.play()
+                result.push(10)
+                btn13.className = "boxG";
+                btn13.disabled = true;
+            }else{
+                const audio = new Audio;
+                audio.src ="./Audio/mixkit-game-click-1114.wav"
+                audio.play()
+                btn13.className = "boxP";
+                btn13.disabled = true;
+            }
+        }  
+
+        if(event.target === btn13){
+            count.push(1)
+            remender = pickBox - count.length;
+            remainingBox.innerHTML = `Pick left: ${remender }`
+            if(random === randomBox){
+                const audio = new Audio;
+                audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
+                audio.play()
+                result.push(10)
+                btn13.className = "boxG";
+                btn13.disabled = true;
+            }else{
+                const audio = new Audio;
+                audio.src ="./Audio/mixkit-game-click-1114.wav"
+                audio.play()
+                btn13.className = "boxP";
+                btn13.disabled = true;
+            }
+        }  
+
+        if(event.target === btn15){
+            count.push(1)
+            remender = pickBox - count.length;
+            remainingBox.innerHTML = `Pick left: ${remender }`
+            if(random === randomBox){
+                const audio = new Audio;
+                audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
+                audio.play()
+                result.push(10)
+                btn15.className = "boxG";
+                btn15.disabled = true;
+            }else{
+                const audio = new Audio;
+                audio.src ="./Audio/mixkit-game-click-1114.wav"
+                audio.play()
+                btn15.className = "boxP";
+                btn15.disabled = true;
+            }
+        }  
     }
 
     // const finalScore = result.reduce((acc, curr)=> acc + curr, 0);
@@ -338,7 +416,7 @@ function winner(){
     // score set 
     const topScore = 10;
     //keep update total score 
-    var total = result.reduce((acc, curr)=> acc+curr, 0);
+    total = result.reduce((acc, curr)=> acc+curr, 0);
 
     if(total > topScore){
         const audio = new Audio;
@@ -356,7 +434,7 @@ function winner(){
         round.push(1)
         level.innerHTML= "Level: 2"
         result = [];
-        score.innerHTML = `Score: 0`
+        // score.innerHTML = `Score: 0`
         
     }
 
@@ -374,7 +452,7 @@ function winner(){
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
         document.querySelector(".mainDiv1").className = "mainDiv2";
-        document.querySelector(".abra1").style.display = "none"
+        // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
     }
 
@@ -392,7 +470,7 @@ function winner(){
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
         document.querySelector(".mainDiv1").className = "mainDiv4";
-        document.querySelector(".abra1").style.display = "none"
+        // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
     }
     
@@ -430,28 +508,29 @@ function resetTable(){
     count.length = 0; 
     
    }
-
    function level2(){
     // set the score to beat
-    const topScore = 30;
-    const total = result.reduce((acc, curr)=> acc+curr, 0);
+    const topScore = 20;
+    total = result.reduce((acc, curr)=> acc+curr, 0);
 
     if(total > topScore){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-ethereal-fairy-win-sound-2019.wav"
         audio.play()
-        find1.style.display = "none"
-        document.querySelector(".result").innerHTML = "Congratulation you are the winner"
-        level.style.display ="none"
-        remainingBox.style.display = "none"
-        scoreDisplay.className = "scoring1"
-        // document.querySelector(".total").innerHTML = `Score: ${total}`
-        document.querySelector(".endBtn").style.marginTop = "150px"
-        document.querySelector(".heading").style.display = "none"
-        document.querySelector(".divBox").style.display = "none"
-        document.querySelector(".mainDiv1").className = "mainDiv3";
-        document.querySelector(".abra1").style.display = "none"
-        document.querySelector("body").style.backgroundColor ="cadetblue"
+        alert(`Well done lets play next round!!`)
+        //run reset table for next level
+        resetTable()
+        find1.style.display = "none";
+        find2.style.display = "inline"
+        document.querySelector(".boxes2").style.display = "block"
+        document.querySelector(".boxes3").style.display = "block"
+        pickBox = 12;
+        const remender = pickBox - count.length;
+        remainingBox.innerHTML = `Pick left: ${remender}`
+        round.push(1)
+        level.innerHTML= "Level: 3"
+        result = [];
+        // score.innerHTML = `Score: 0`
     }
 
     if(total < topScore){
@@ -468,7 +547,7 @@ function resetTable(){
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
         document.querySelector(".mainDiv1").className = "mainDiv2";
-        document.querySelector(".abra1").style.display = "none"
+        // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
     }
 
@@ -486,7 +565,73 @@ function resetTable(){
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
         document.querySelector(".mainDiv1").className = "mainDiv4";
-        document.querySelector(".abra1").style.display = "none"
+        // document.querySelector(".abra1").style.display = "none"
+        document.querySelector("body").style.backgroundColor ="cadetblue"
+    }
+   
+console.log("first")
+console.log(result)
+console.log(count)
+}
+
+
+   function level3(){
+    // set the score to beat
+    const topScore = 30;
+    total = result.reduce((acc, curr)=> acc+curr, 0);
+
+    if(total > topScore){
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-ethereal-fairy-win-sound-2019.wav"
+        audio.play()
+        find2.style.display = "none";
+      
+        document.querySelector(".result").innerHTML = "Congratulation you are the winner"
+        level.style.display ="none"
+        remainingBox.style.display = "none"
+        scoreDisplay.className = "scoring1"
+        // document.querySelector(".total").innerHTML = `Score: ${total}`
+        document.querySelector(".endBtn").style.marginTop = "150px"
+        document.querySelector(".heading").style.display = "none"
+        document.querySelector(".divBox").style.display = "none"
+        document.querySelector(".mainDiv1").className = "mainDiv3";
+        // document.querySelector(".abra1").style.display = "none"
+        document.querySelector("body").style.backgroundColor ="cadetblue"
+    }
+
+    if(total < topScore){
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-circus-lose-2030.wav"
+        audio.play()
+        find2.style.display = "none"
+        document.querySelector(".result").innerHTML = "Better luck next time"
+        level.style.display ="none"
+        remainingBox.style.display = "none"
+        scoreDisplay.className = "scoring1"
+        // document.querySelector(".total").innerHTML = `Score: ${total}`
+        document.querySelector(".endBtn").style.marginTop = "150px"
+        document.querySelector(".heading").style.display = "none"
+        document.querySelector(".divBox").style.display = "none"
+        document.querySelector(".mainDiv1").className = "mainDiv2";
+        // document.querySelector(".abra1").style.display = "none"
+        document.querySelector("body").style.backgroundColor ="cadetblue"
+    }
+
+    if(total === topScore){
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-circus-lose-2030.wav"
+        audio.play()
+        find2.style.display = "none"
+        document.querySelector(".result").innerHTML = "Better luck next time"
+        level.style.display ="none"
+        remainingBox.style.display = "none"
+        scoreDisplay.className = "scoring1"
+        // document.querySelector(".total").innerHTML = `Score: ${total}`
+        document.querySelector(".endBtn").style.marginTop = "150px"
+        document.querySelector(".heading").style.display = "none"
+        document.querySelector(".divBox").style.display = "none"
+        document.querySelector(".mainDiv1").className = "mainDiv4";
+        // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
     }
    
