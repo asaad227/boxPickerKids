@@ -41,20 +41,6 @@ var round = [];
 var count = [];
 var total = 0;
 var num = 3;
-// function start(){
-//     const total = result.reduce((acc, curr)=> acc + curr, 0);
-//     const game = round.length + 1
-//     score.innerHTML = `Score: ${total}`;
-//     level.innerHTML = `Level: ${game}`
-//     //change class name so change display according to page need
-//    mainDiv.className = "mainDiv1"
-//    divBox.style.display = "initial";
-//    play.style.display = "none";
-//    abra.className = "abra1"
-   
-// }
-
-// play.addEventListener("click", start)
 
 document.addEventListener("click", function(event){
     if(event.target === easy){
@@ -398,7 +384,7 @@ document.addEventListener("click", function(event){
             }
         }  
 
-        if(event.target === btn13){
+        if(event.target === btn14){
             count.push(1)
             remender = pickBox - count.length;
             remainingBox.innerHTML = `Pick left: ${remender }`
@@ -407,14 +393,14 @@ document.addEventListener("click", function(event){
                 audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
                 audio.play()
                 result.push(10)
-                btn13.className = "boxG";
-                btn13.disabled = true;
+                btn14.className = "boxG";
+                btn14.disabled = true;
             }else{
                 const audio = new Audio;
                 audio.src ="./Audio/mixkit-game-click-1114.wav"
                 audio.play()
-                btn13.className = "boxP";
-                btn13.disabled = true;
+                btn14.className = "boxP";
+                btn14.disabled = true;
             }
         }  
 
@@ -439,8 +425,7 @@ document.addEventListener("click", function(event){
         }  
     }
 
-    // const finalScore = result.reduce((acc, curr)=> acc + curr, 0);
-    // score.innerHTML = `Score: ${finalScore}`
+ 
 })
 
 function resetTable(){
@@ -544,10 +529,7 @@ function winner(){
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeChange").style.display = "none"
     }
-    console.log("winner num", num) 
-console.log(round)
-console.log(result)
-console.log(count)
+
 }
 
    function level2(){
@@ -615,9 +597,7 @@ console.log(count)
         document.querySelector(".modeChange").style.display = "none"
     }
    
-    console.log("level2 num", num)
-console.log(result)
-console.log(count)
+
 }
 
 
@@ -683,8 +663,6 @@ console.log(count)
         document.querySelector(".modeChange").style.display = "none"
     }
    
-console.log("level3 num", num)
-console.log(result)
-console.log(count)
+
 }
 
