@@ -199,7 +199,8 @@ footer {
   }
 
   p{
-    padding-left: 50px;
+    display: flex;
+    justify-content: center;
   }
   
   .container, .containerChange, p {
@@ -255,4 +256,3 @@ footer {
 }
   
  
-  
