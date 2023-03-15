@@ -510,7 +510,8 @@ function winner(){
         document.querySelector(".mainDiv1").className = "mainDiv2";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue";
-        document.querySelector(".modeChange").style.display = "none"
+        document.querySelector(".modeChange").style.display = "none";
+        document.querySelector("footer").style.paddingTop = "325px";
     }
 
     if(total === topScore){
@@ -529,7 +530,8 @@ function winner(){
         document.querySelector(".mainDiv1").className = "mainDiv4";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
-        document.querySelector(".modeChange").style.display = "none"
+        document.querySelector(".modeChange").style.display = "none";
+        document.querySelector("footer").style.paddingTop = "325px";
     }
 
 }
@@ -577,7 +579,8 @@ function winner(){
         document.querySelector(".mainDiv1").className = "mainDiv2";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
-        document.querySelector(".modeChange").style.display = "none"
+        document.querySelector(".modeChange").style.display = "none";
+        document.querySelector("footer").style.paddingTop = "325px";
     }
 
     if(total === topScore){
@@ -596,7 +599,8 @@ function winner(){
         document.querySelector(".mainDiv1").className = "mainDiv4";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
-        document.querySelector(".modeChange").style.display = "none"
+        document.querySelector(".modeChange").style.display = "none";
+        document.querySelector("footer").style.paddingTop = "325px";
     }
    
 
@@ -624,7 +628,8 @@ function winner(){
         document.querySelector(".mainDiv1").className = "mainDiv3";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
-        document.querySelector(".modeChange").style.display = "none"
+        document.querySelector(".modeChange").style.display = "none";
+        document.querySelector("footer").style.paddingTop = "325px";
     }
 
     if(total < topScore){
@@ -643,7 +648,8 @@ function winner(){
         document.querySelector(".mainDiv1").className = "mainDiv2";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
-        document.querySelector(".modeChange").style.display = "none"
+        document.querySelector(".modeChange").style.display = "none";
+        document.querySelector("footer").style.paddingTop = "325px";
     }
 
     if(total === topScore){
@@ -662,7 +668,8 @@ function winner(){
         document.querySelector(".mainDiv1").className = "mainDiv4";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
-        document.querySelector(".modeChange").style.display = "none"
+        document.querySelector(".modeChange").style.display = "none";
+        document.querySelector("footer").style.paddingTop = "325px";
     }
    
 
