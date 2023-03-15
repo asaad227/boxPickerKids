@@ -69,6 +69,13 @@ body{
   color:floralwhite;
 }
 
+.find{
+  display: inline;
+}
+
+.find1{
+  display: none;
+}
 
 .boxes{
     display: block;

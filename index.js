@@ -23,7 +23,9 @@ const abra = document.querySelector(".abra")
 const reload = document.querySelector(".reload");
 const endBtn = document.querySelector(".endBtn");
 const abra1 = document.querySelector(".abra1");
-const start1 = document.querySelector(".start1")
+const start1 = document.querySelector(".start1");
+const find = document.querySelector(".find");
+const find1 = document.querySelector(".find1")
 // create box pick option for the player
 var pickBox = 7;
 let result= []
@@ -49,14 +51,14 @@ document.addEventListener("click", function(event){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-game-click-1114.wav"
         audio.play()
-        const total = result.reduce((acc, curr)=> acc + curr, 0);
+        // const total = result.reduce((acc, curr)=> acc + curr, 0);
         const game = round.length + 1;
-        score.innerHTML = `Score: ${total}`;
+        // score.innerHTML = `Score: ${total}`;
         level.innerHTML = `Level: ${game}`;
         //change class name so change display according to page need
        mainDiv.className = "mainDiv1";
        divBox.style.display = "initial";
-       abra.className = "abra1";
+       abra.style.display = "none";
        start.className = "start1";
       }
 
@@ -68,14 +70,15 @@ document.addEventListener("click", function(event){
     //keep pick box counter on display 
     let remender = pickBox - count.length;
     remainingBox.innerHTML = `Pick left: ${remender }`
-    const random = Math.floor(Math.random()*4);
-    const randomBox = Math.floor(Math.random()*4)
-    //game will stop if player score more theb required score 
+    const random = Math.floor(Math.random()*3);
+    const randomBox = Math.floor(Math.random()*3)
+    //game will stop if player score more then required score 
     // as two level game so condition also made for all level 
     if(count.length === pickBox || result.length >= 2 && round.length === 0|| result.length > 3 && round.length === 1){
        //nested codition to check round compeleted or not
         if(round.length > 0){
             level2()
+           
         }else{
         winner()
         resetTable()
@@ -326,8 +329,8 @@ document.addEventListener("click", function(event){
         }  
     }
 
-    const finalScore = result.reduce((acc, curr)=> acc + curr, 0);
-    score.innerHTML = `Score: ${finalScore}`
+    // const finalScore = result.reduce((acc, curr)=> acc + curr, 0);
+    // score.innerHTML = `Score: ${finalScore}`
 })
 
 
@@ -344,7 +347,8 @@ function winner(){
         alert(`Well done lets play next round!!`)
         //run reset table for next level
         resetTable()
-        
+        find.style.display = "none";
+        find1.style.display = "inline"
         document.querySelector(".boxes2").style.display = "block"
         pickBox = 10;
         const remender = pickBox - count.length;
@@ -361,11 +365,11 @@ function winner(){
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
         alert(document.querySelector(".result").innerHTML = "Better luck next time")
-       
+       find.style.display = "none"
         level.style.display ="none"
         remainingBox.style.display = "none";
         scoreDisplay.className = "scoring1"
-        document.querySelector(".total").innerHTML = `Score: ${total}`
+        // document.querySelector(".total").innerHTML = `Score: ${total}`
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
@@ -379,11 +383,11 @@ function winner(){
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
         alert(document.querySelector(".result").innerHTML = "Whoops Draw!!!")
-     
+        find.style.display = "none"
         level.style.display ="none";
         remainingBox.style.display = "none";
         scoreDisplay.className = "scoring1"
-        document.querySelector(".total").innerHTML = `Score: ${total}`
+        // document.querySelector(".total").innerHTML = `Score: ${total}`
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
@@ -436,11 +440,12 @@ function resetTable(){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-ethereal-fairy-win-sound-2019.wav"
         audio.play()
+        find1.style.display = "none"
         document.querySelector(".result").innerHTML = "Congratulation you are the winner"
         level.style.display ="none"
         remainingBox.style.display = "none"
         scoreDisplay.className = "scoring1"
-        document.querySelector(".total").innerHTML = `Score: ${total}`
+        // document.querySelector(".total").innerHTML = `Score: ${total}`
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
@@ -453,11 +458,12 @@ function resetTable(){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
+        find1.style.display = "none"
         document.querySelector(".result").innerHTML = "Better luck next time"
         level.style.display ="none"
         remainingBox.style.display = "none"
         scoreDisplay.className = "scoring1"
-        document.querySelector(".total").innerHTML = `Score: ${total}`
+        // document.querySelector(".total").innerHTML = `Score: ${total}`
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
@@ -470,11 +476,12 @@ function resetTable(){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
+        find1.style.display = "none"
         document.querySelector(".result").innerHTML = "Better luck next time"
         level.style.display ="none"
         remainingBox.style.display = "none"
         scoreDisplay.className = "scoring1"
-        document.querySelector(".total").innerHTML = `Score: ${total}`
+        // document.querySelector(".total").innerHTML = `Score: ${total}`
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
