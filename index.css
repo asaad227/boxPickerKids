@@ -1,8 +1,14 @@
 body{
-    background-color: darkgrey;
+    /* background-color: darkgrey; */
+    background-image: url(./Pictures/UntitledDesign.png);
     box-sizing: border-box;
     border: 1px solid gold;
     border-radius: 5px;
+    font-family: 'Island Moments', cursive;
+    font-family: 'Metal Mania', cursive;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .start {
@@ -12,11 +18,19 @@ body{
     align-items: center;
     padding-top: 100px;
   }
-
-  .mode{
+.gameMode{
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  box-shadow:0 0 0 2px rgb(255, 255, 255);
+  border: 2px solid gold;
+  border-radius: 5px;
+  padding: 2px;
+}
+  /* .mode{
     display: flex;
     flex-direction: row;
-  }
+  } */
   .modeDisplay{
     display: none;
   }
@@ -30,7 +44,7 @@ body{
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
     width: 75px;
     height: 25px;
-    border: none;
+    border: 2px solid gold;
     margin: 5px;
     border-radius: 5px;
     font-size: small;
@@ -42,7 +56,27 @@ body{
   .endBtn{
     padding-top: 50px;
   }
+  .gameName, .head, .gameMode {
+    color: rgb(255, 255, 255);
+    animation-name: nameTitle;
+    animation-duration: 2s;
+  }
+  
+  @keyframes nameTitle {
+    from {color:rgb(255, 255, 255);}
+    to {color: rgba(0, 0, 0, 0.3);}
+  }
 
+  .easy, .medium, .hard, .play {
+    color: black;
+    animation-name: gameTitle;
+    animation-duration: 2s;
+  }
+  
+  @keyframes gameTitle {
+    from {color:black;}
+    to {color: rgb(255, 255, 255);}
+  }
   .play, .gameName{
     margin: 5px;
   }
@@ -60,6 +94,7 @@ body{
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    color: #fff;
   
 }
 
