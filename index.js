@@ -47,7 +47,7 @@ document.addEventListener("click", function(event){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-arcade-player-select-2036.wav"
         audio.play()
-        num = 4
+        num = 3
         pickBox = 9
         modeDisplay.innerHTML = `Game Mode: Easy`
     }
@@ -488,7 +488,7 @@ function winner(){
         level.innerHTML= "Level: 2"
         result = [];
         // score.innerHTML = `Score: 0`
-       document.querySelector(".modeChange").style.display = "none"
+    //    document.querySelector(".modeChange").style.display = "none"
         
     }
 
@@ -556,7 +556,7 @@ function winner(){
         level.innerHTML= "Level: 3"
         result = [];
         // score.innerHTML = `Score: 0`
-        document.querySelector(".modeChange").style.display = "none"
+        // document.querySelector(".modeChange").style.display = "none"
     }
 
     if(total < topScore){
