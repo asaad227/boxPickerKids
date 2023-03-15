@@ -46,6 +46,29 @@ body{
     color:floralwhite;
 }
 
+.mainDiv3{
+  background-image: url(./gif/charmander_dancing.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100px;
+  display: block;
+  flex-direction: column;
+  padding-top: 20px;
+  text-align: center;
+  color:floralwhite;
+}
+.mainDiv4{
+  background-image: url(./gif/aipom_pokemon.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px;
+  display: block;
+  flex-direction: column;
+  padding-top: 20px;
+  text-align: center;
+  color:floralwhite;
+}
+
 
 .boxes{
     display: block;

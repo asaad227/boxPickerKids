@@ -46,11 +46,11 @@ var count = []
 
 document.addEventListener("click", function(event){
       if(event.target === play){
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-game-click-1114.wav"
+        audio.play()
         const total = result.reduce((acc, curr)=> acc + curr, 0);
         const game = round.length + 1;
-        const audio = new Audio;
-        audio.src ="./Audio/ES_Laugh Chipmunk - SFX Producer.mp3"
-        audio.play()
         score.innerHTML = `Score: ${total}`;
         level.innerHTML = `Level: ${game}`;
         //change class name so change display according to page need
@@ -385,7 +385,7 @@ function winner(){
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
-        document.querySelector(".mainDiv1").className = "mainDiv2";
+        document.querySelector(".mainDiv1").className = "mainDiv4";
         document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
     }
@@ -435,7 +435,6 @@ function resetTable(){
         audio.src ="./Audio/mixkit-ethereal-fairy-win-sound-2019.wav"
         audio.play()
         document.querySelector(".result").innerHTML = "Congratulation you are the winner"
-        
         level.style.display ="none"
         remainingBox.style.display = "none"
         scoreDisplay.className = "scoring1"
@@ -443,7 +442,7 @@ function resetTable(){
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
-        document.querySelector(".mainDiv1").className = "mainDiv2";
+        document.querySelector(".mainDiv1").className = "mainDiv3";
         document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
     }
@@ -477,7 +476,7 @@ function resetTable(){
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
-        document.querySelector(".mainDiv1").className = "mainDiv2";
+        document.querySelector(".mainDiv1").className = "mainDiv4";
         document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
     }
