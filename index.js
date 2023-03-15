@@ -57,14 +57,28 @@ var num = 3;
 // play.addEventListener("click", start)
 
 document.addEventListener("click", function(event){
+    if(event.target === easy){
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-arcade-player-select-2036.wav"
+        audio.play()
+        num = 4
+        pickBox = 9
+        modeDisplay.innerHTML = `Game Mode: Easy`
+    }
   
     if(event.target === medium){
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-arcade-player-select-2036.wav"
+        audio.play()
         num = 4
         pickBox = 8
         modeDisplay.innerHTML = `Game Mode: Medium`
     }
 
     if(event.target === hard){
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-arcade-player-select-2036.wav"
+        audio.play()
         num = 3
         pickBox = 7
         modeDisplay.innerHTML = `Game Mode: Hard`
