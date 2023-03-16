@@ -526,25 +526,25 @@ function winner(){
         document.querySelector("footer").style.paddingTop = "325px";
     }
 
-    // if(total === topScore){
-    //     const audio = new Audio;
-    //     audio.src ="./Audio/mixkit-circus-lose-2030.wav"
-    //     audio.play()
-    //     alert(document.querySelector(".result").innerHTML = "Whoops Draw!!!")
-    //     find.style.display = "none"
-    //     level.style.display ="none";
-    //     remainingBox.style.display = "none";
-    //     scoreDisplay.className = "scoring1"
-    //     // document.querySelector(".total").innerHTML = `Score: ${total}`
-    //     document.querySelector(".endBtn").style.marginTop = "150px"
-    //     document.querySelector(".heading").style.display = "none"
-    //     document.querySelector(".divBox").style.display = "none"
-    //     document.querySelector(".mainDiv1").className = "mainDiv4";
-    //     // document.querySelector(".abra1").style.display = "none"
-    //     document.querySelector("body").style.backgroundColor ="cadetblue"
-    //     document.querySelector(".modeDisplay").style.display = "none";
-    //     document.querySelector("footer").style.paddingTop = "325px";
-    // }
+    if(total === topScore){
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-circus-lose-2030.wav"
+        audio.play()
+        alert(document.querySelector(".result").innerHTML = "Better luck next time!!")
+        find.style.display = "none"
+        level.style.display ="none";
+        remainingBox.style.display = "none";
+        scoreDisplay.className = "scoring1"
+        // document.querySelector(".total").innerHTML = `Score: ${total}`
+        document.querySelector(".endBtn").style.marginTop = "150px"
+        document.querySelector(".heading").style.display = "none"
+        document.querySelector(".divBox").style.display = "none"
+        document.querySelector(".mainDiv1").className = "mainDiv4";
+        // document.querySelector(".abra1").style.display = "none"
+        document.querySelector("body").style.backgroundColor ="cadetblue"
+        document.querySelector(".modeDisplay").style.display = "none";
+        document.querySelector("footer").style.paddingTop = "325px";
+    }
 
 }
 
@@ -596,25 +596,25 @@ function winner(){
         document.querySelector("footer").style.paddingTop = "325px";
     }
 
-    // if(total === topScore){
-    //     const audio = new Audio;
-    //     audio.src ="./Audio/mixkit-circus-lose-2030.wav"
-    //     audio.play()
-    //     find1.style.display = "none"
-    //     document.querySelector(".result").innerHTML = "Better luck next time"
-    //     level.style.display ="none"
-    //     remainingBox.style.display = "none"
-    //     scoreDisplay.className = "scoring1"
-    //     // document.querySelector(".total").innerHTML = `Score: ${total}`
-    //     document.querySelector(".endBtn").style.marginTop = "150px"
-    //     document.querySelector(".heading").style.display = "none"
-    //     document.querySelector(".divBox").style.display = "none"
-    //     document.querySelector(".mainDiv1").className = "mainDiv4";
-    //     // document.querySelector(".abra1").style.display = "none"
-    //     document.querySelector("body").style.backgroundColor ="cadetblue"
-    //     document.querySelector(".modeDisplay").style.display = "none";
-    //     document.querySelector("footer").style.paddingTop = "325px";
-    // }
+    if(total === topScore){
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-circus-lose-2030.wav"
+        audio.play()
+        find1.style.display = "none"
+        document.querySelector(".result").innerHTML = "Better luck next time!!"
+        level.style.display ="none"
+        remainingBox.style.display = "none"
+        scoreDisplay.className = "scoring1"
+        // document.querySelector(".total").innerHTML = `Score: ${total}`
+        document.querySelector(".endBtn").style.marginTop = "150px"
+        document.querySelector(".heading").style.display = "none"
+        document.querySelector(".divBox").style.display = "none"
+        document.querySelector(".mainDiv1").className = "mainDiv4";
+        // document.querySelector(".abra1").style.display = "none"
+        document.querySelector("body").style.backgroundColor ="cadetblue"
+        document.querySelector(".modeDisplay").style.display = "none";
+        document.querySelector("footer").style.paddingTop = "325px";
+    }
    
 
 }
@@ -665,25 +665,25 @@ function winner(){
         document.querySelector("footer").style.paddingTop = "325px";
     }
 
-    // if(total === topScore){
-    //     const audio = new Audio;
-    //     audio.src ="./Audio/mixkit-circus-lose-2030.wav"
-    //     audio.play()
-    //     find2.style.display = "none"
-    //     document.querySelector(".result").innerHTML = "Better luck next time"
-    //     level.style.display ="none"
-    //     remainingBox.style.display = "none"
-    //     scoreDisplay.className = "scoring1"
-    //     // document.querySelector(".total").innerHTML = `Score: ${total}`
-    //     document.querySelector(".endBtn").style.marginTop = "150px"
-    //     document.querySelector(".heading").style.display = "none"
-    //     document.querySelector(".divBox").style.display = "none"
-    //     document.querySelector(".mainDiv1").className = "mainDiv4";
-    //     // document.querySelector(".abra1").style.display = "none"
-    //     document.querySelector("body").style.backgroundColor ="cadetblue"
-    //     document.querySelector(".modeDisplay").style.display = "none";
-    //     document.querySelector("footer").style.paddingTop = "325px";
-    // }
+    if(total === topScore){
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-circus-lose-2030.wav"
+        audio.play()
+        find2.style.display = "none"
+        document.querySelector(".result").innerHTML = "Better luck next time!!"
+        level.style.display ="none"
+        remainingBox.style.display = "none"
+        scoreDisplay.className = "scoring1"
+        // document.querySelector(".total").innerHTML = `Score: ${total}`
+        document.querySelector(".endBtn").style.marginTop = "150px"
+        document.querySelector(".heading").style.display = "none"
+        document.querySelector(".divBox").style.display = "none"
+        document.querySelector(".mainDiv1").className = "mainDiv4";
+        // document.querySelector(".abra1").style.display = "none"
+        document.querySelector("body").style.backgroundColor ="cadetblue"
+        document.querySelector(".modeDisplay").style.display = "none";
+        document.querySelector("footer").style.paddingTop = "325px";
+    }
    
 
 }
