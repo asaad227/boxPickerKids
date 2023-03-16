@@ -528,6 +528,7 @@ function winner(){
         remainingBox.innerHTML = `Pick left: ${remender}`
         round = round + 1;
         level.innerHTML= "Level: 2"
+        //clear the score for next level
         result = [];
         // score.innerHTML = `Score: 0`
     //    document.querySelector(".modeChange").style.display = "none"
@@ -539,7 +540,8 @@ function winner(){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
-        round = []
+        //clear the round and score
+        round = 0
         result = []
         alert(document.querySelector(".result").innerHTML = "Better luck next time")
        find.style.display = "none"
@@ -561,7 +563,8 @@ function winner(){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
-        round = []
+        //clear the round and score so its wont be execute again
+        round = 0
         result = []
         alert(document.querySelector(".result").innerHTML = "Better luck next time!!")
         find.style.display = "none"
@@ -603,6 +606,7 @@ function winner(){
         remainingBox.innerHTML = `Pick left: ${remender}`
         round = round + 1;
         level.innerHTML= "Level: 3"
+        // clear the score for next level
         result = [];
         // score.innerHTML = `Score: 0`
         // document.querySelector(".modeChange").style.display = "none"
@@ -613,7 +617,8 @@ function winner(){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
-        round = []
+        // clear the round so it wont be carried to next round. round stop here
+        round = 0
         result = []
         find1.style.display = "none"
         document.querySelector(".result").innerHTML = "Better luck next time"
@@ -635,7 +640,8 @@ function winner(){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
-        round = []
+        // round back to zero so wont be execute this function again 
+        round = 0
         result = []
         find1.style.display = "none"
         document.querySelector(".result").innerHTML = "Better luck next time!!"
@@ -665,7 +671,9 @@ function winner(){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-ethereal-fairy-win-sound-2019.wav"
         audio.play()
-        round = []
+        // as this game upto 3 round so after this round this function wont be execute
+        // bcoz round will be 0 which is less then round = 1;
+        round = 0
         result = []
         find2.style.display = "none";
         num = num - 1;
@@ -688,7 +696,8 @@ function winner(){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
-        round = []
+        //round === 0 means its wont be execute again. Game over
+        round = 0
         result = []
         find2.style.display = "none"
         document.querySelector(".result").innerHTML = "Better luck next time"
@@ -710,7 +719,7 @@ function winner(){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
-        round = []
+        round = 0
         result = []
         find2.style.display = "none"
         document.querySelector(".result").innerHTML = "Better luck next time!!"
