@@ -1,6 +1,9 @@
 body{
     /* background-color: darkgrey; */
     background-image: url(./Pictures/UntitledDesign.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     box-sizing: border-box;
     border: 1px solid gold;
     border-radius: 5px;
@@ -16,7 +19,7 @@ body{
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 150px;
   }
 .gameMode{
   display: flex;
@@ -56,6 +59,9 @@ body{
   .endBtn{
     padding-top: 50px;
   }
+ .gameName{
+  padding-top: 50px;
+ }
   .gameName, .head, .gameMode {
     color: rgb(255, 255, 255);
     animation-name: nameTitle;
