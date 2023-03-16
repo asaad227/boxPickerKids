@@ -64,12 +64,12 @@ document.addEventListener("click", function(event){
        container.className = "containerChnage"
        console.log(gameMode, "play")
       }
-    if(event.target === easy){
+      if(event.target === easy){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-arcade-player-select-2036.wav"
         audio.play()
-        num = num
-        pickBox = pickBox
+        num = num;
+        pickBox = pickBox;
         gameMode = "Easy"
         // modeDisplay.innerHTML = `Game Mode: ${gameMode}`
         console.log(gameMode, "easy")
