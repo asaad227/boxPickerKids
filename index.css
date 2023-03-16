@@ -59,30 +59,13 @@ body{
   .endBtn{
     padding-top: 50px;
   }
+  .gameName, .head, .gameMode{
+    color: #fff;
+  }
  .gameName{
   padding-top: 50px;
  }
-  .gameName, .head, .gameMode {
-    color: rgb(255, 255, 255);
-    animation-name: nameTitle;
-    animation-duration: 2s;
-  }
-  
-  @keyframes nameTitle {
-    from {color:rgb(255, 255, 255);}
-    to {color: rgba(0, 0, 0, 0.3);}
-  }
 
-  .easy, .medium, .hard, .play {
-    color: black;
-    animation-name: gameTitle;
-    animation-duration: 2s;
-  }
-  
-  @keyframes gameTitle {
-    from {color:black;}
-    to {color: rgb(255, 255, 255);}
-  }
   .play, .gameName{
     margin: 5px;
   }
@@ -227,14 +210,14 @@ footer {
   }
   
   .container {
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     flex-direction: column;
-    padding-top: 200px;
+    padding-top: 150px;
   }
 
   .containerChange {
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     flex-direction: column;
   }
@@ -295,5 +278,47 @@ footer {
   justify-content: center;
   padding-left: 50px;
 }
+
+
+/* animation below here */
+.gameName, .head, .gameMode {
+  color:#fff;
+  animation-name: nameTitle;
+  animation-duration: 4s;
+}
+
+@keyframes nameTitle {
+  from {color:#fff}
+  to {color: black}
+}
+
+.easy, .medium, .hard, .play {
+  color: black;
+  animation-name: gameTitle;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes gameTitle {
+  from {color:black;}
+  to {color: rgb(255, 255, 255);}
+}
   
- 
+ .disPlayAnimation1{
+  background-image: url(./gif/charmander_shiny.gif);
+  width: 50px;
+  height: 50px;
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+  animation-name: firstPic;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  
+ }
+
+@keyframes firstPic{
+  from {background-image: url(./gif/charmander_shiny.gif);}
+  to {background-image: url(./gif/espeon.gif);}
+  
+}

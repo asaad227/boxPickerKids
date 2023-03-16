@@ -502,6 +502,7 @@ function winner(){
         result = [];
         // score.innerHTML = `Score: 0`
     //    document.querySelector(".modeChange").style.display = "none"
+    document.querySelector("footer").style.paddingTop = "75px";
         
     }
 
@@ -572,6 +573,7 @@ function winner(){
         result = [];
         // score.innerHTML = `Score: 0`
         // document.querySelector(".modeChange").style.display = "none"
+        document.querySelector("footer").style.paddingTop = "125px";
     }
 
     if(total < topScore){
