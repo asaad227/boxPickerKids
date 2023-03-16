@@ -42,35 +42,10 @@ var round = [];
 var count = [];
 var total = 0;
 var num = 3;
+var gameMode;
 
 document.addEventListener("click", function(event){
-    if(event.target === easy){
-        const audio = new Audio;
-        audio.src ="./Audio/mixkit-arcade-player-select-2036.wav"
-        audio.play()
-        num = 3
-        pickBox = 9
-        modeDisplay.innerHTML = `Game Mode: Easy`
-    }
-  
-    if(event.target === medium){
-        const audio = new Audio;
-        audio.src ="./Audio/mixkit-arcade-player-select-2036.wav"
-        audio.play()
-        num = 4
-        pickBox = 8
-        modeDisplay.innerHTML = `Game Mode: Medium`
-    }
-
-    if(event.target === hard){
-        const audio = new Audio;
-        audio.src ="./Audio/mixkit-arcade-player-select-2036.wav"
-        audio.play()
-        num = 3
-        pickBox = 7
-        modeDisplay.innerHTML = `Game Mode: Hard`
-    }
-      if(event.target === play){
+    if(event.target === play){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-game-click-1114.wav"
         audio.play()
@@ -79,13 +54,49 @@ document.addEventListener("click", function(event){
         // score.innerHTML = `Score: ${total}`;
         level.innerHTML = `Level: ${game}`;
         //change class name so change display according to page need
+    
        mainDiv.className = "mainDiv1";
        divBox.style.display = "initial";
        abra.style.display = "none";
        start.className = "start1";
-       modeDisplay.className= "modeChange";
+        modeDisplay.style.display = "flex";
+        modeDisplay.innerHTML = `Game mode: ${gameMode}`
        container.className = "containerChnage"
+       console.log(gameMode, "play")
       }
+    if(event.target === easy){
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-arcade-player-select-2036.wav"
+        audio.play()
+        num = num
+        pickBox = pickBox
+        gameMode = "Easy"
+        // modeDisplay.innerHTML = `Game Mode: ${gameMode}`
+        console.log(gameMode, "easy")
+    }
+  
+    if(event.target === medium){
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-arcade-player-select-2036.wav"
+        audio.play()
+        num = num + 1;
+        pickBox = pickBox -1
+        gameMode = "Medium"
+        // modeDisplay.innerHTML = `Game Mode: ${gameMode}`
+        console.log(gameMode, "medium")
+    }
+
+    if(event.target === hard){
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-arcade-player-select-2036.wav"
+        audio.play()
+        num = num; 
+        pickBox = pickBox - 2;
+        gameMode = "Hard"
+        // modeDisplay.innerHTML = `Game Mode: Hard`
+        console.log(gameMode, "hard", num, pickBox)
+    }
+     
 
       if(event.target === reload){
         console.log("i have clicked")
@@ -510,7 +521,7 @@ function winner(){
         document.querySelector(".mainDiv1").className = "mainDiv2";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue";
-        document.querySelector(".modeChange").style.display = "none";
+        document.querySelector(".modeDisplay").style.display = "none";
         document.querySelector("footer").style.paddingTop = "325px";
     }
 
@@ -530,7 +541,7 @@ function winner(){
         document.querySelector(".mainDiv1").className = "mainDiv4";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
-        document.querySelector(".modeChange").style.display = "none";
+        document.querySelector(".modeDisplay").style.display = "none";
         document.querySelector("footer").style.paddingTop = "325px";
     }
 
@@ -579,7 +590,7 @@ function winner(){
         document.querySelector(".mainDiv1").className = "mainDiv2";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
-        document.querySelector(".modeChange").style.display = "none";
+        document.querySelector(".modeDisplay").style.display = "none";
         document.querySelector("footer").style.paddingTop = "325px";
     }
 
@@ -599,7 +610,7 @@ function winner(){
         document.querySelector(".mainDiv1").className = "mainDiv4";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
-        document.querySelector(".modeChange").style.display = "none";
+        document.querySelector(".modeDisplay").style.display = "none";
         document.querySelector("footer").style.paddingTop = "325px";
     }
    
@@ -628,7 +639,7 @@ function winner(){
         document.querySelector(".mainDiv1").className = "mainDiv3";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
-        document.querySelector(".modeChange").style.display = "none";
+        document.querySelector(".modeDisplay").style.display = "none";
         document.querySelector("footer").style.paddingTop = "325px";
     }
 
@@ -648,7 +659,7 @@ function winner(){
         document.querySelector(".mainDiv1").className = "mainDiv2";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
-        document.querySelector(".modeChange").style.display = "none";
+        document.querySelector(".modeDisplay").style.display = "none";
         document.querySelector("footer").style.paddingTop = "325px";
     }
 
@@ -668,7 +679,7 @@ function winner(){
         document.querySelector(".mainDiv1").className = "mainDiv4";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
-        document.querySelector(".modeChange").style.display = "none";
+        document.querySelector(".modeDisplay").style.display = "none";
         document.querySelector("footer").style.paddingTop = "325px";
     }
    
