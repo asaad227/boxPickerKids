@@ -42,7 +42,7 @@ const whiteMode1 = document.querySelector(".whiteMode1");
 // create box pick option for the player
 var pickBox = 9;
 let result= [];
-var round = [];
+var round = 1;
 var count = [];
 var total = 0;
 var num = 3;
@@ -79,7 +79,7 @@ document.addEventListener("click", function(event){
         audio.src ="./Audio/mixkit-arcade-player-select-2036.wav"
         audio.play()
         // const total = result.reduce((acc, curr)=> acc + curr, 0);
-        const game = round.length + 1;
+        const game = round;
         // score.innerHTML = `Score: ${total}`;
         level.innerHTML = `Level: ${game}`;
         //change class name so change display according to page need
@@ -139,19 +139,19 @@ document.addEventListener("click", function(event){
     const randomBox = Math.floor(Math.random()*num)
     //game will stop if player score more then required score 
     // as two level game so condition also made for all level 
-    if(count.length === pickBox || result.length >= 2 && round.length === 0|| result.length >= 3 && round.length === 1 ||result.length >= 4 && round.length === 2){
+    if(count.length === pickBox || result.length >= 2 && round === 1|| result.length >= 3 && round === 2 ||result.length >= 4 && round === 3){
        //nested codition to check round compeleted or not
-       if(round.length === 0){
-        console.log("round.length === 0", round.length)
+       if(round === 1){
+        console.log("round === 1", round)
         winner()
         resetTable()
     }else{
-        if(round.length === 1){
-            console.log("round.length === 1", round.length)
+        if(round === 2){
+            console.log("round === 2", round)
             level2()
            }else{
-            if(round.length === 2 ){
-                console.log("round.length === 2", round.length)
+            if(round === 3){
+                console.log("round === 3", round)
                 level3()
             }
            }
@@ -526,7 +526,7 @@ function winner(){
         pickBox = pickBox - 1;
         const remender = pickBox - count.length;
         remainingBox.innerHTML = `Pick left: ${remender}`
-        round.push(1)
+        round = round + 1;
         level.innerHTML= "Level: 2"
         result = [];
         // score.innerHTML = `Score: 0`
@@ -539,6 +539,8 @@ function winner(){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
+        round = []
+        result = []
         alert(document.querySelector(".result").innerHTML = "Better luck next time")
        find.style.display = "none"
         level.style.display ="none"
@@ -548,7 +550,7 @@ function winner(){
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
-        document.querySelector(".mainDiv1").className = "mainDiv2";
+        document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/pikachu.gif)";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue";
         document.querySelector(".modeDisplay").style.display = "none";
@@ -559,6 +561,8 @@ function winner(){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
+        round = []
+        result = []
         alert(document.querySelector(".result").innerHTML = "Better luck next time!!")
         find.style.display = "none"
         level.style.display ="none";
@@ -568,7 +572,7 @@ function winner(){
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
-        document.querySelector(".mainDiv1").className = "mainDiv4";
+        document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/aipom_pokemon.gif)";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
@@ -597,7 +601,7 @@ function winner(){
         pickBox = pickBox - 1;
         const remender = pickBox - count.length;
         remainingBox.innerHTML = `Pick left: ${remender}`
-        round.push(1)
+        round = round + 1;
         level.innerHTML= "Level: 3"
         result = [];
         // score.innerHTML = `Score: 0`
@@ -609,6 +613,8 @@ function winner(){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
+        round = []
+        result = []
         find1.style.display = "none"
         document.querySelector(".result").innerHTML = "Better luck next time"
         level.style.display ="none"
@@ -618,7 +624,7 @@ function winner(){
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
-        document.querySelector(".mainDiv1").className = "mainDiv2";
+        document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/pikachu.gif)";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
@@ -629,6 +635,8 @@ function winner(){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
+        round = []
+        result = []
         find1.style.display = "none"
         document.querySelector(".result").innerHTML = "Better luck next time!!"
         level.style.display ="none"
@@ -638,7 +646,7 @@ function winner(){
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
-        document.querySelector(".mainDiv1").className = "mainDiv4";
+        document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/aipom_pokemon.gif)";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
@@ -657,6 +665,8 @@ function winner(){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-ethereal-fairy-win-sound-2019.wav"
         audio.play()
+        round = []
+        result = []
         find2.style.display = "none";
         num = num - 1;
         document.querySelector(".result").innerHTML = "Congratulation you are the winner"
@@ -667,7 +677,7 @@ function winner(){
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
-        document.querySelector(".mainDiv1").className = "mainDiv3";
+        document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/charmander_dancing.gif)";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
@@ -678,6 +688,8 @@ function winner(){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
+        round = []
+        result = []
         find2.style.display = "none"
         document.querySelector(".result").innerHTML = "Better luck next time"
         level.style.display ="none"
@@ -687,7 +699,7 @@ function winner(){
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
-        document.querySelector(".mainDiv1").className = "mainDiv2";
+        document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/pikachu.gif)";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
@@ -698,17 +710,17 @@ function winner(){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
+        round = []
+        result = []
         find2.style.display = "none"
         document.querySelector(".result").innerHTML = "Better luck next time!!"
         level.style.display ="none"
         remainingBox.style.display = "none"
         scoreDisplay.className = "scoring1"
-        // document.querySelector(".total").innerHTML = `Score: ${total}`
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
-        document.querySelector(".mainDiv1").className = "mainDiv4";
-        // document.querySelector(".abra1").style.display = "none"
+        document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/aipom_pokemon.gif)";
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
         document.querySelector("footer").style.paddingTop = "325px";
