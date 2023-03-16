@@ -42,7 +42,7 @@ var round = [];
 var count = [];
 var total = 0;
 var num = 3;
-var gameMode;
+var gameMode = "Easy";
 
 document.addEventListener("click", function(event){
     if(event.target === play){
