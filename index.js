@@ -49,6 +49,7 @@ var num = 3;
 var gameMode = "Easy";
 
 document.addEventListener("click", function(event){
+  
     if(event.target === darkMode || event.target === darkMode1 ){
         console.log("darkMode")
         document.querySelector(".body1").className = "body2";
@@ -69,7 +70,7 @@ document.addEventListener("click", function(event){
 
     if(event.target === play){
         const audio = new Audio;
-        audio.src ="./Audio/play-time-andrey-rossi-main-version-18256-02-21.mp3"
+        audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
         audio.play()
         // const total = result.reduce((acc, curr)=> acc + curr, 0);
         const game = round.length + 1;
@@ -504,7 +505,7 @@ function winner(){
     const topScore = 10;
     //keep update total score 
     total = result.reduce((acc, curr)=> acc+curr, 0);
-
+   
     if(total > topScore){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-ethereal-fairy-win-sound-2019.wav"
@@ -574,7 +575,7 @@ function winner(){
     // set the score to beat
     const topScore = 20;
     total = result.reduce((acc, curr)=> acc+curr, 0);
-
+  
     if(total > topScore){
         const audio = new Audio;
         audio.src ="./Audio/mixkit-ethereal-fairy-win-sound-2019.wav"

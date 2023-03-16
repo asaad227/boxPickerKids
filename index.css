@@ -69,7 +69,7 @@
   .play, .easy, .medium, .hard, .darkMode, .whiteMode{
     box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
-    width: 75px;
+    width: 70px;
     height: 25px;
     border: 2px solid gold;
     margin: 5px;
@@ -98,7 +98,7 @@
     display: none;
   }
 
-  .darkMode:hover, .whiteMode:hover,.easy:hover,.medium:hover,.hard:hover,.play:hover,.box1:hover,.box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover, .box7:hover, .box8:hover, .box9:hover, .box10:hover, .box11:hover, .box12:hover,.box13:hover, .box14:hover, .box15:hover{
+  .reload:hover,.dataStore:hover,.darkMode1:hover, .whiteMode1:hover,.darkMode:hover, .whiteMode:hover,.easy:hover,.medium:hover,.hard:hover,.play:hover,.box1:hover,.box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover, .box7:hover, .box8:hover, .box9:hover, .box10:hover, .box11:hover, .box12:hover,.box13:hover, .box14:hover, .box15:hover{
     background-color: rgb(202, 211, 135);
     color: rgb(94, 72, 72);
   }
@@ -330,7 +330,7 @@ footer {
   to {color: black}
 }
 
-.easy, .medium, .hard, .play, .dataStore, .reload {
+.easy, .medium, .hard, .play, .dataStore, .reload, .darkMode, .whiteMode, .darkMode1, .whiteMode1 {
   color: black;
   animation-name: gameTitle;
   animation-duration: 2s;
