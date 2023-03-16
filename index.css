@@ -1,4 +1,4 @@
-body{
+.body1{
     /* background-color: darkgrey; */
     background-image: url(./Pictures/UntitledDesign.png);
     background-repeat: no-repeat;
@@ -13,6 +13,30 @@ body{
     font-family: 'Roboto', sans-serif;
 
 }
+
+.whiteMode{
+  display: none;
+}
+
+.whiteMode1{
+  display: none;
+}
+
+.body2{
+  background-image: url(./Pictures/computer-game-gamer-games-wallpaper-preview.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+  border: 1px solid rgb(250, 250, 248);
+  border-radius: 5px;
+  font-family: 'Island Moments', cursive;
+  font-family: 'Metal Mania', cursive;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+
 
 .start {
     display: flex;
@@ -42,7 +66,7 @@ body{
     padding-top: 5px;
   }
   
-  .play, .easy, .medium, .hard{
+  .play, .easy, .medium, .hard, .darkMode, .whiteMode{
     box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
     width: 75px;
@@ -74,7 +98,7 @@ body{
     display: none;
   }
 
-  .easy:hover,.medium:hover,.hard:hover,.play:hover,.box1:hover,.box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover, .box7:hover, .box8:hover, .box9:hover, .box10:hover, .box11:hover, .box12:hover,.box13:hover, .box14:hover, .box15:hover{
+  .darkMode:hover, .whiteMode:hover,.easy:hover,.medium:hover,.hard:hover,.play:hover,.box1:hover,.box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover, .box7:hover, .box8:hover, .box9:hover, .box10:hover, .box11:hover, .box12:hover,.box13:hover, .box14:hover, .box15:hover{
     background-color: rgb(202, 211, 135);
     color: rgb(94, 72, 72);
   }
@@ -189,7 +213,7 @@ body{
     font-style: oblique;
 }
 
-.reload,.dataStore{
+.reload,.dataStore, .darkMode1, .whiteMode1{
     box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
     color: aliceblue;

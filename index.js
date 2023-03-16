@@ -34,7 +34,11 @@ const easy = document.querySelector(".easy");
 const medium = document.querySelector(".medium");
 const hard = document.querySelector(".hard");
 const modeDisplay = document.querySelector(".modeDisplay");
-const container = document.querySelector(".container")
+const container = document.querySelector(".container");
+const darkMode = document.querySelector(".darkMode");
+const whiteMode = document.querySelector(".whiteMode");
+const darkMode1 = document.querySelector(".darkMode1");
+const whiteMode1 = document.querySelector(".whiteMode1");
 // create box pick option for the player
 var pickBox = 9;
 let result= [];
@@ -45,9 +49,27 @@ var num = 3;
 var gameMode = "Easy";
 
 document.addEventListener("click", function(event){
+    if(event.target === darkMode || event.target === darkMode1 ){
+        console.log("darkMode")
+        document.querySelector(".body1").className = "body2";
+        whiteMode1.style.display = "inline";
+        darkMode1.style.display = "none"
+        whiteMode.style.display = "inline";
+        darkMode.style.display = "none"
+    }
+
+    if(event.target === whiteMode || event.target === whiteMode1){
+        console.log("darkMode")
+        document.querySelector(".body2").className = "body1";
+        darkMode.style.display = "inline";
+        whiteMode.style.display = "none";
+        darkMode1.style.display = "inline";
+        whiteMode1.style.display = "none";
+    }
+
     if(event.target === play){
         const audio = new Audio;
-        audio.src ="./Audio/mixkit-game-click-1114.wav"
+        audio.src ="./Audio/play-time-andrey-rossi-main-version-18256-02-21.mp3"
         audio.play()
         // const total = result.reduce((acc, curr)=> acc + curr, 0);
         const game = round.length + 1;
