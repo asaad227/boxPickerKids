@@ -52,6 +52,9 @@ document.addEventListener("click", function(event){
   
     if(event.target === darkMode || event.target === darkMode1 ){
         console.log("darkMode")
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-arcade-player-select-2036.wav"
+        audio.play()
         document.querySelector(".body1").className = "body2";
         whiteMode1.style.display = "inline";
         darkMode1.style.display = "none"
@@ -60,7 +63,10 @@ document.addEventListener("click", function(event){
     }
 
     if(event.target === whiteMode || event.target === whiteMode1){
-        console.log("darkMode")
+        console.log("whiteMode")
+        const audio = new Audio;
+        audio.src ="./Audio/mixkit-arcade-player-select-2036.wav"
+        audio.play()
         document.querySelector(".body2").className = "body1";
         darkMode.style.display = "inline";
         whiteMode.style.display = "none";
@@ -70,7 +76,7 @@ document.addEventListener("click", function(event){
 
     if(event.target === play){
         const audio = new Audio;
-        audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
+        audio.src ="./Audio/mixkit-arcade-player-select-2036.wav"
         audio.play()
         // const total = result.reduce((acc, curr)=> acc + curr, 0);
         const game = round.length + 1;
