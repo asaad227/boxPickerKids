@@ -281,6 +281,20 @@ footer {
 
 
 /* animation below here */
+.result{
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 16px;
+  animation-name: textResult;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes textResult {
+  from {text-transform: capitalize; color: #fff; font-size: 16px;}
+  to {text-transform:uppercase; color: gold;}
+}
+
 .gameName, .head, .gameMode {
   color:#fff;
   animation-name: nameTitle;
@@ -292,7 +306,7 @@ footer {
   to {color: black}
 }
 
-.easy, .medium, .hard, .play {
+.easy, .medium, .hard, .play, .dataStore, .reload {
   color: black;
   animation-name: gameTitle;
   animation-duration: 2s;
