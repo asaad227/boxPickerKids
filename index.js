@@ -35,10 +35,10 @@ const medium = document.querySelector(".medium");
 const hard = document.querySelector(".hard");
 const modeDisplay = document.querySelector(".modeDisplay");
 const container = document.querySelector(".container");
-const darkMode = document.querySelector(".darkMode");
-const whiteMode = document.querySelector(".whiteMode");
-const darkMode1 = document.querySelector(".darkMode1");
-const whiteMode1 = document.querySelector(".whiteMode1");
+const fillWhite = document.querySelector(".fill-button-white");
+const fillDark = document.querySelector(".fill-button-dark");
+const fillWhiteTxt = document.querySelector(".fill-button-white-text");
+const fillDarkTxt = document.querySelector(".fill-button-dark-text");
 // create box pick option for the player
 var pickBox = 9;
 let result= [];
@@ -50,28 +50,26 @@ var gameMode = "Easy";
 
 document.addEventListener("click", function(event){
   
-    if(event.target === darkMode || event.target === darkMode1 ){
-        console.log("darkMode")
+    if(event.target === fillDarkTxt ){
+        console.log("darkMode1")
         const audio = new Audio;
         audio.src ="./Audio/mixkit-arcade-player-select-2036.wav"
         audio.play()
         document.querySelector(".body1").className = "body2";
-        whiteMode1.style.display = "inline";
-        darkMode1.style.display = "none"
-        whiteMode.style.display = "inline";
-        darkMode.style.display = "none"
+        fillDark.style.display = "none";
+        fillWhite.style.display = "inline-block"
+        
     }
 
-    if(event.target === whiteMode || event.target === whiteMode1){
+    if(event.target === fillWhiteTxt){
         console.log("whiteMode")
         const audio = new Audio;
         audio.src ="./Audio/mixkit-arcade-player-select-2036.wav"
         audio.play()
         document.querySelector(".body2").className = "body1";
-        darkMode.style.display = "inline";
-        whiteMode.style.display = "none";
-        darkMode1.style.display = "inline";
-        whiteMode1.style.display = "none";
+        fillDark.style.display = "inline-block";
+        fillWhite.style.display = "none"
+     
     }
 
     if(event.target === play){

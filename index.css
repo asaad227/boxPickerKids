@@ -14,13 +14,11 @@
 
 }
 
-.whiteMode{
+/* .whiteMode, .whiteMode1{
   display: none;
-}
+} */
 
-.whiteMode1{
-  display: none;
-}
+
 
 .body2{
   background-image: url(./Pictures/computer-game-gamer-games-wallpaper-preview.jpg);
@@ -66,7 +64,7 @@
     padding-top: 5px;
   }
   
-  .play, .easy, .medium, .hard, .darkMode, .whiteMode{
+/* .darkMode, .whiteMode{
     box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
     width: 70px;
@@ -78,7 +76,7 @@
     font-weight: bold;
    background-color: rgb(125, 132, 75);
     cursor: pointer;
-  }
+  } */
  
   .endBtn{
     padding-top: 50px;
@@ -90,7 +88,7 @@
   padding-top: 50px;
  }
 
-  .play, .gameName{
+  .gameName{
     margin: 5px;
   }
 
@@ -98,7 +96,7 @@
     display: none;
   }
 
-  .reload:hover,.dataStore:hover,.darkMode1:hover, .whiteMode1:hover,.darkMode:hover, .whiteMode:hover,.easy:hover,.medium:hover,.hard:hover,.play:hover,.box1:hover,.box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover, .box7:hover, .box8:hover, .box9:hover, .box10:hover, .box11:hover, .box12:hover,.box13:hover, .box14:hover, .box15:hover{
+.box1:hover,.box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover, .box7:hover, .box8:hover, .box9:hover, .box10:hover, .box11:hover, .box12:hover,.box13:hover, .box14:hover, .box15:hover{
     background-color: rgb(202, 211, 135);
     color: rgb(94, 72, 72);
   }
@@ -184,19 +182,7 @@
     font-style: oblique;
 }
 
-.reload,.dataStore, .darkMode1, .whiteMode1{
-    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
-    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
-    color: aliceblue;
-    width: 100px;
-    height: 50px;
-    border: none;
-    margin: 5px;
-    border-radius: 5px;
-    font-weight: bold;
-   background-color: rgb(152, 103, 103);
-    cursor: pointer;
-}
+
 
 
 footer {
@@ -301,18 +287,6 @@ footer {
   to {color: black}
 }
 
-.easy, .medium, .hard, .play, .dataStore, .reload, .darkMode, .whiteMode, .darkMode1, .whiteMode1 {
-  color: black;
-  animation-name: gameTitle;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes gameTitle {
-  from {color:black;}
-  to {color: rgb(255, 255, 255);}
-}
-  
  .disPlayAnimation1{
   background-image: url(./gif/charmander_shiny.gif);
   width: 50px;
@@ -330,4 +304,191 @@ footer {
   from {background-image: url(./gif/charmander_shiny.gif);}
   to {background-image: url(./gif/espeon.gif);}
   
+}
+
+/* White button from here*/
+.fill-button-white {
+  position: relative;
+  overflow:hidden;
+  display:none;
+  width: 75px;
+  height: 25px;
+  border:1px solid #35495e;
+  text-align:center;
+  box-sizing:border-box;
+  color:#a8bace;
+  text-decoration:none;
+  cursor: pointer;
+  line-height:28px;
+  font-family: 'arial';
+  border-radius: 4px;
+}
+.fill-button-white > span {
+  display:block;
+}
+.fill-button-white > .fill-button-white-hover:after, .fill-button-white > .fill-button-white-hover:before {
+  position:absolute;
+  top:0;
+  opacity:0;
+  display:none;
+  content:"";
+  width:0;
+  height:30px;
+}
+.fill-button-white > .fill-button-white-hover:after {
+  background-color:#35495e;
+  transform:skewX(45deg);
+  transform-origin:center center;
+  transition:all .35s, opacity .4s;
+  left:50%;
+}
+.fill-button-white .fill-button-white-hover:before {
+  background-color:#42b883;
+  transition:opacity 1s;
+}
+
+.fill-button-white .fill-button-white-text {
+  z-index:1;
+  position:relative;
+  color:#35495e;
+  transition:color .35s;
+}
+.fill-button-white:hover .fill-button-white-text {
+  color:#42b883;
+}
+.fill-button-white .fill-button-white-hover:hover:after {
+  opacity:1;
+  left:2%;
+  width:95%;
+  transform:skewX(45deg);
+}
+.fill-button-white > .fill-button-white-hover:hover:before {
+  opacity: 1;
+  left: 0;
+  width:100%;
+}
+
+/* Dark button from here*/
+
+.fill-button-dark {
+  position: relative;
+  overflow:hidden;
+  display:inline-block;
+  width: 75px;
+  height: 25px;
+  border:1px solid #35495e;
+  text-align:center;
+  box-sizing:border-box;
+  color:#a8bace;
+  text-decoration:none;
+  cursor: pointer;
+  line-height:28px;
+  font-family: 'arial';
+  border-radius: 4px;
+}
+.fill-button-dark > span {
+  display:block;
+}
+.fill-button-dark > .fill-button-dark-hover:after, .fill-button-dark > .fill-button-dark-hover:before {
+  position:absolute;
+  top:0;
+  opacity:0;
+  display:block;
+  content:"";
+  width:0;
+  height:30px;
+}
+.fill-button-dark > .fill-button-dark-hover:after {
+  background-color:#35495e;
+  transform:skewX(45deg);
+  transform-origin:center center;
+  transition:all .35s, opacity .4s;
+  left:50%;
+}
+.fill-button-dark .fill-button-dark-hover:before {
+  background-color:#42b883;
+  transition:opacity 1s;
+}
+
+.fill-button-dark .fill-button-dark-text {
+  z-index:1;
+  position:relative;
+  color:#35495e;
+  transition:color .35s;
+}
+.fill-button-dark:hover .fill-button-dark-text {
+  color:#42b883;
+}
+.fill-button-dark .fill-button-dark-hover:hover:after {
+  opacity:1;
+  left:2%;
+  width:95%;
+  transform:skewX(45deg);
+}
+.fill-button-dark > .fill-button-dark-hover:hover:before {
+  opacity: 1;
+  left: 0;
+  width:100%;
+}
+
+/* Play, easy, medium, hard, reload and data store button from here*/
+.fill-button {
+  position: relative;
+  overflow:hidden;
+  display:inline-block;
+  width: 75px;
+  height:25px;
+  border:1px solid #35495e;
+  text-align:center;
+  box-sizing:border-box;
+  color:#a8bace;
+  text-decoration:none;
+  cursor: pointer;
+  line-height:28px;
+  font-family: 'arial';
+  border-radius: 4px;
+}
+.fill-button > span {
+  display:block;
+}
+.fill-button > .fill-button-hover:after, .fill-button > .fill-button-hover:before {
+  position:absolute;
+  top:0;
+  opacity:0;
+  display:block;
+  content:"";
+  width:0;
+  height:30px;
+}
+.fill-button > .fill-button-hover:after {
+  background-color:#35495e;
+  transform:skewX(45deg);
+  transform-origin:center center;
+  transition:all .35s, opacity .4s;
+  left:50%;
+}
+.fill-button .fill-button-hover:before {
+  background-color:#42b883;
+  transition:opacity 1s;
+}
+
+.fill-button .fill-button-text {
+  z-index:1;
+  position:relative;
+  color:#35495e;
+  transition:color .35s;
+}
+.fill-button:hover .fill-button-text {
+  color:#42b883;
+}
+.fill-button .fill-button-hover:hover:after {
+  opacity:1;
+  left:2%;
+  width:95%;
+  transform:skewX(45deg);
+}
+.fill-button > .fill-button-hover:hover:before {
+  opacity: 1;
+  left: 0;
+  width:100%;
 }
