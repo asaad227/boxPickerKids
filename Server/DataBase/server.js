@@ -1,11 +1,11 @@
-// Loads the configuration from config.env to process.env
-import 'dotenv/config';
-
+// Loads the configuration from config.env to process
+// make sure dotenv/config not dotenv/config.js
+import "dotenv/config";
 import express from 'express';
 import cors from 'cors';
 // get MongoDB driver connection
-import { connectToServer } from './db/connection.js';
-import recordRoutes from './route/router.js';
+import { connectToServer } from './db/conn.js';
+import recordRoutes from './routes/record.js';
 
 const PORT = process.env.PORT || 5000;
 const app = express();

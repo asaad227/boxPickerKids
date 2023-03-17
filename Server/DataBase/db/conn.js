@@ -14,7 +14,7 @@ export async function connectToServer(callback) {
       return callback(err);
     }
 
-    dbConnection = db.db('Game');
+    dbConnection = db.db('game');
     console.log('Successfully connected to MongoDB.');
 
     return callback();
