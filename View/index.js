@@ -39,17 +39,21 @@ const darkMode = document.querySelector(".darkMode");
 const whiteMode = document.querySelector(".whiteMode");
 const darkMode1 = document.querySelector(".darkMode1");
 const whiteMode1 = document.querySelector(".whiteMode1");
+const nameIn = document.querySelector(".nameIn");
+const playerName = document.querySelector(".playerName");
+const runningTotal = document.querySelector(".total")
 // create box pick option for the player
 var pickBox = 9;
 let result= [];
 var round = 1;
 var count = [];
 var total = 0;
+var leaderBoard = 0;
 var num = 3;
 var gameMode = "Easy";
 
 document.addEventListener("click", function(event){
-  
+    getUsers()
     if(event.target === darkMode || event.target === darkMode1 ){
         console.log("darkMode")
         const audio = new Audio;
@@ -83,14 +87,15 @@ document.addEventListener("click", function(event){
         // score.innerHTML = `Score: ${total}`;
         level.innerHTML = `Level: ${game}`;
         //change class name so change display according to page need
-    
+    playerName.innerHTML = `Player Name: ${nameIn.value}`
        mainDiv.className = "mainDiv1";
        divBox.style.display = "initial";
        abra.style.display = "none";
        start.className = "start1";
         modeDisplay.style.display = "flex";
         modeDisplay.innerHTML = `Game mode: ${gameMode}`
-       container.className = "containerChnage"
+       container.className = "containerChnage";
+       runningTotal.innerHTML = `Score: ${leaderBoard}`
        console.log(gameMode, "play")
       }
       if(event.target === easy){
@@ -167,12 +172,15 @@ document.addEventListener("click", function(event){
             //if button click it will update counter and pickbox
             count.push(1)
             remender = pickBox - count.length;
+            runningTotal.innerHTML = `Score: ${leaderBoard}`
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
                 const audio = new Audio;
                 audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
                 audio.play()
                 // if this condition meet it will update result score and button class
+                leaderBoard = leaderBoard + 10;
+                runningTotal.innerHTML = `Score: ${leaderBoard}`
                 result.push(10)
                 btn1.className = "boxG";
                 //disabled as soon as player this button, so no second pick
@@ -190,11 +198,14 @@ document.addEventListener("click", function(event){
         if(event.target === btn2 ){
             count.push(1)
             remender = pickBox - count.length;
+            runningTotal.innerHTML = `Score: ${leaderBoard}`
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
                 const audio = new Audio;
                 audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
                 audio.play()
+                leaderBoard = leaderBoard + 10;
+                runningTotal.innerHTML = `Score: ${leaderBoard}`
                 result.push(10)
                 btn2.className = "boxG";
                 btn2.disabled = true;
@@ -209,11 +220,14 @@ document.addEventListener("click", function(event){
         if(event.target === btn3){
             count.push(1)
             remender = pickBox - count.length;
+            runningTotal.innerHTML = `Score: ${leaderBoard}`
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
                 const audio = new Audio;
                 audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
                 audio.play()
+                leaderBoard = leaderBoard + 10;
+                runningTotal.innerHTML = `Score: ${leaderBoard}`
                 result.push(10)
                 btn3.className = "boxG";
                 btn3.disabled = true;
@@ -229,11 +243,14 @@ document.addEventListener("click", function(event){
         if(event.target === btn4){
             count.push(1)
             remender = pickBox - count.length;
+            runningTotal.innerHTML = `Score: ${leaderBoard}`
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
                 const audio = new Audio;
                 audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
                 audio.play()
+                leaderBoard = leaderBoard + 10;
+                runningTotal.innerHTML = `Score: ${leaderBoard}`
                 result.push(10)
                 btn4.className = "boxG";
                 btn4.disabled = true;
@@ -249,12 +266,15 @@ document.addEventListener("click", function(event){
         if(event.target === btn5){
             count.push(1)
             remender = pickBox - count.length;
+           
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
                 const audio = new Audio;
                 audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
                 audio.play()
                 result.push(10)
+                leaderBoard = leaderBoard + 10;
+                runningTotal.innerHTML = `Score: ${leaderBoard}`
                 btn5.className = "boxG";
                 btn5.disabled = true;
             }else{
@@ -269,12 +289,15 @@ document.addEventListener("click", function(event){
         if(event.target === btn6){
             count.push(1)
             remender = pickBox - count.length;
+            
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
                 const audio = new Audio;
                 audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
                 audio.play()
                 result.push(10)
+                leaderBoard = leaderBoard + 10;
+                runningTotal.innerHTML = `Score: ${leaderBoard}`
                 btn6.className = "boxG";
                 btn6.disabled = true;
             }else{
@@ -289,12 +312,15 @@ document.addEventListener("click", function(event){
         if(event.target === btn7){
             count.push(1)
             remender = pickBox - count.length;
+           
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
                 const audio = new Audio;
                 audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
                 audio.play()
                 result.push(10)
+                leaderBoard = leaderBoard + 10;
+                runningTotal.innerHTML = `Score: ${leaderBoard}`
                 btn7.className = "boxG";
                 btn7.disabled = true;
             }else{
@@ -309,12 +335,15 @@ document.addEventListener("click", function(event){
         if(event.target === btn8 ){
             count.push(1)
             remender = pickBox - count.length;
+          
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
                 const audio = new Audio;
                 audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
                 audio.play()
                 result.push(10)
+                leaderBoard = leaderBoard + 10;
+                runningTotal.innerHTML = `Score: ${leaderBoard}`
                 btn8.className = "boxG";
                 btn8.disabled = true;
             }else{
@@ -329,12 +358,15 @@ document.addEventListener("click", function(event){
         if(event.target === btn9){
             count.push(1)
             remender = pickBox - count.length;
+            
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
                 const audio = new Audio;
                 audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
                 audio.play()
                 result.push(10)
+                leaderBoard = leaderBoard + 10;
+                runningTotal.innerHTML = `Score: ${leaderBoard}`
                 btn9.className = "boxG";
                 btn9.disabled = true;
             }else{
@@ -349,12 +381,15 @@ document.addEventListener("click", function(event){
         if(event.target === btn10){
             count.push(1)
             remender = pickBox - count.length;
+        
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
                 const audio = new Audio;
                 audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
                 audio.play()
                 result.push(10)
+                leaderBoard = leaderBoard + 10;
+                runningTotal.innerHTML = `Score: ${leaderBoard}`
                 btn10.className = "boxG";
                 btn10.disabled = true;
             }else{
@@ -369,12 +404,15 @@ document.addEventListener("click", function(event){
         if(event.target === btn11){
             count.push(1)
             remender = pickBox - count.length;
+          
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
                 const audio = new Audio;
                 audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
                 audio.play()
                 result.push(10)
+                leaderBoard = leaderBoard + 10;
+                runningTotal.innerHTML = `Score: ${leaderBoard}`
                 btn11.className = "boxG";
                 btn11.disabled = true;
             }else{
@@ -389,12 +427,15 @@ document.addEventListener("click", function(event){
         if(event.target === btn12){
             count.push(1)
             remender = pickBox - count.length;
+         
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
                 const audio = new Audio;
                 audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
                 audio.play()
                 result.push(10)
+                leaderBoard = leaderBoard + 10;
+                runningTotal.innerHTML = `Score: ${leaderBoard}`
                 btn12.className = "boxG";
                 btn12.disabled = true;
             }else{
@@ -409,12 +450,15 @@ document.addEventListener("click", function(event){
         if(event.target === btn13){
             count.push(1)
             remender = pickBox - count.length;
+          
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
                 const audio = new Audio;
                 audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
                 audio.play()
                 result.push(10)
+                leaderBoard = leaderBoard + 10;
+                runningTotal.innerHTML = `Score: ${leaderBoard}`
                 btn13.className = "boxG";
                 btn13.disabled = true;
             }else{
@@ -429,12 +473,15 @@ document.addEventListener("click", function(event){
         if(event.target === btn14){
             count.push(1)
             remender = pickBox - count.length;
+          
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
                 const audio = new Audio;
                 audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
                 audio.play()
                 result.push(10)
+                leaderBoard = leaderBoard + 10;
+                runningTotal.innerHTML = `Score: ${leaderBoard}`
                 btn14.className = "boxG";
                 btn14.disabled = true;
             }else{
@@ -449,12 +496,15 @@ document.addEventListener("click", function(event){
         if(event.target === btn15){
             count.push(1)
             remender = pickBox - count.length;
+           
             remainingBox.innerHTML = `Pick left: ${remender }`
             if(random === randomBox){
                 const audio = new Audio;
                 audio.src ="./Audio/ES_Magical Twinkle 1 - SFX Producer.mp3"
                 audio.play()
                 result.push(10)
+                leaderBoard = leaderBoard + 10;
+                runningTotal.innerHTML = `Score: ${leaderBoard}`
                 btn15.className = "boxG";
                 btn15.disabled = true;
             }else{
@@ -513,6 +563,7 @@ function winner(){
     total = result.reduce((acc, curr)=> acc+curr, 0);
    
     if(total > topScore){
+   
         const audio = new Audio;
         audio.src ="./Audio/mixkit-ethereal-fairy-win-sound-2019.wav"
         audio.play()
@@ -533,10 +584,12 @@ function winner(){
         // score.innerHTML = `Score: 0`
     //    document.querySelector(".modeChange").style.display = "none"
     document.querySelector("footer").style.paddingTop = "75px";
-        
+       
     }
 
     if(total < topScore){
+        runningTotal.innerHTML = `Score: ${leaderBoard}`
+        fetchPostUsers()
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
@@ -548,6 +601,7 @@ function winner(){
         level.style.display ="none"
         remainingBox.style.display = "none";
         scoreDisplay.className = "scoring1"
+        runningTotal.innerHTML = `Score: ${leaderBoard}`
         // document.querySelector(".total").innerHTML = `Score: ${total}`
         document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
@@ -560,6 +614,8 @@ function winner(){
     }
 
     if(total === topScore){
+        runningTotal.innerHTML = `Score: ${leaderBoard}`
+        fetchPostUsers()
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
@@ -585,6 +641,7 @@ function winner(){
 }
 
    function level2(){
+
     // set the score to beat
     const topScore = 20;
     total = result.reduce((acc, curr)=> acc+curr, 0);
@@ -614,6 +671,8 @@ function winner(){
     }
 
     if(total < topScore){
+        runningTotal.innerHTML = `Score: ${leaderBoard}`
+        fetchPostUsers()
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
@@ -637,6 +696,8 @@ function winner(){
     }
 
     if(total === topScore){
+        runningTotal.innerHTML = `Score: ${leaderBoard}`
+        fetchPostUsers()
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
@@ -664,10 +725,14 @@ function winner(){
 
 
    function level3(){
+    
     // set the score to beat
     const topScore = 30;
     total = result.reduce((acc, curr)=> acc+curr, 0);
+    runningTotal.innerHTML = `Score: ${leaderBoard}`
     if(total > topScore){
+
+        fetchPostUsers()
         const audio = new Audio;
         audio.src ="./Audio/mixkit-ethereal-fairy-win-sound-2019.wav"
         audio.play()
@@ -693,6 +758,7 @@ function winner(){
     }
 
     if(total < topScore){
+        fetchPostUsers()
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
@@ -716,6 +782,7 @@ function winner(){
     }
 
     if(total === topScore){
+        fetchPostUsers()
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
@@ -738,3 +805,26 @@ function winner(){
 
 }
 
+
+async function fetchPostUsers() {
+  
+    let response = await fetch(`http://localhost:5000/game`, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name: nameIn.value, score: leaderBoard }),
+    });
+    let data = await response.json();
+    console.log("post data", data);
+  }
+
+  async function getUsers() {
+  
+    let response = await fetch(`http://localhost:5000/game`, {
+      method: "GET",
+    });
+    let data = await response.json();
+    console.log(data)
+  }
