@@ -618,10 +618,10 @@ function winner(){
         scoreDisplay.className = "scoring1"
         runningTotal.innerHTML = `Score: ${leaderBoard}`
         // document.querySelector(".total").innerHTML = `Score: ${total}`
-        document.querySelector(".endBtn").style.marginTop = "150px"
+        // document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
-        document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/pikachu.gif)";
+        // document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/pikachu.gif)";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue";
         document.querySelector(".modeDisplay").style.display = "none";
@@ -647,10 +647,10 @@ function winner(){
         remainingBox.style.display = "none";
         scoreDisplay.className = "scoring1"
         // document.querySelector(".total").innerHTML = `Score: ${total}`
-        document.querySelector(".endBtn").style.marginTop = "150px"
+        // document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
-        document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/aipom_pokemon.gif)";
+        // document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/aipom_pokemon.gif)";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
@@ -710,10 +710,10 @@ function winner(){
         remainingBox.style.display = "none"
         scoreDisplay.className = "scoring1"
         // document.querySelector(".total").innerHTML = `Score: ${total}`
-        document.querySelector(".endBtn").style.marginTop = "150px"
+        // document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
-        document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/pikachu.gif)";
+        // document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/pikachu.gif)";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
@@ -741,10 +741,10 @@ function winner(){
         remainingBox.style.display = "none"
         scoreDisplay.className = "scoring1"
         // document.querySelector(".total").innerHTML = `Score: ${total}`
-        document.querySelector(".endBtn").style.marginTop = "150px"
+        // document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
-        document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/aipom_pokemon.gif)";
+        // document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/aipom_pokemon.gif)";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
@@ -783,10 +783,10 @@ function winner(){
         remainingBox.style.display = "none"
         scoreDisplay.className = "scoring1"
         // document.querySelector(".total").innerHTML = `Score: ${total}`
-        document.querySelector(".endBtn").style.marginTop = "150px"
+        // document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
-        document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/charmander_dancing.gif)";
+        // document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/charmander_dancing.gif)";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
@@ -812,10 +812,10 @@ function winner(){
         remainingBox.style.display = "none"
         scoreDisplay.className = "scoring1"
         // document.querySelector(".total").innerHTML = `Score: ${total}`
-        document.querySelector(".endBtn").style.marginTop = "150px"
+        // document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
-        document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/pikachu.gif)";
+        // document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/pikachu.gif)";
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
@@ -840,10 +840,10 @@ function winner(){
         level.style.display ="none"
         remainingBox.style.display = "none"
         scoreDisplay.className = "scoring1"
-        document.querySelector(".endBtn").style.marginTop = "150px"
+        // document.querySelector(".endBtn").style.marginTop = "150px"
         document.querySelector(".heading").style.display = "none"
         document.querySelector(".divBox").style.display = "none"
-        document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/aipom_pokemon.gif)";
+        // document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/aipom_pokemon.gif)";
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
         // document.querySelector("footer").style.paddingTop = "325px";
@@ -897,9 +897,9 @@ if(payload.length > 1){
         console.log(sorted)
         const nameMap = sorted.map(e=> e[1].name);
         const scoreMap = sorted.map(e=> e[1].score);
-        for(let i = 0; i < nameMap.length; i++){
-            var divN = document.createElement("div");
-            var divS = document.createElement("div");
+        for(let i = 0; i < 10; i++){
+            var divN = document.createElement("tr");
+            var divS = document.createElement("tr");
             nam = nameP.appendChild(divN);
             total = scoreP.appendChild(divS)
                 nam.innerHTML = `${nameMap[i]}`;

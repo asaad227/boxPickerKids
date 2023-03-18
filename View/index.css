@@ -111,7 +111,7 @@
     background-size: 100px;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
+    /* padding-top: 100px; */
     text-align: center;
     color:floralwhite;
   
@@ -336,19 +336,25 @@ footer {
 }
 
 
-td, th {
-  border: 1px solid gold;
+th{
   padding: 10px;
   font-size: 26px;
-  color: red;
-  font-weight: bold;
+  color:rgb(49, 12, 12);
+  font-weight: bolder;
+  font-style: oblique;
+}
+
+td {
+ 
+  padding: 10px;
+  font-size: 26px;
   font-style: oblique;
 
 }
 
 table {
   border-collapse: collapse;
-  width: 40%;
+  /* width: 40%; */
 }
 
 th {
