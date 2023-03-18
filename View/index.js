@@ -94,7 +94,7 @@ document.addEventListener("click", function(event){
        alert("Please enter your name!!")
        }
        if(nameIn.value !== ""){
-        playerName.innerHTML = `Player Name: ${nameIn.value}`
+        playerName.innerHTML = `Player Name: ${nameIn.value[0].toUpperCase() + nameIn.value.slice(1)}`
         level.innerHTML = `Level: ${game}`;
         mainDiv.className = "mainDiv1";
         divBox.style.display = "initial";
@@ -628,6 +628,7 @@ function winner(){
         // document.querySelector("footer").style.paddingTop = "325px";
         getUsers()
         document.querySelector(".scoreDisplay").style.display = "inline-block"
+        document.querySelector(".leader").style.display = "block"
        
         
     }
@@ -657,6 +658,7 @@ function winner(){
         // document.querySelector("footer").style.paddingTop = "325px";
         getUsers()
         document.querySelector(".scoreDisplay").style.display = "inline-block"
+        document.querySelector(".leader").style.display = "block"
         
         
     }
@@ -720,6 +722,7 @@ function winner(){
         // document.querySelector("footer").style.paddingTop = "325px";
         getUsers()
         document.querySelector(".scoreDisplay").style.display = "inline-block"
+        document.querySelector(".leader").style.display = "block"
        
         
     }
@@ -751,6 +754,7 @@ function winner(){
         // document.querySelector("footer").style.paddingTop = "325px";
         getUsers()
         document.querySelector(".scoreDisplay").style.display = "inline-block"
+        document.querySelector(".leader").style.display = "block"
         
         
     }
@@ -793,6 +797,7 @@ function winner(){
         // document.querySelector("footer").style.paddingTop = "325px";
         getUsers()
         document.querySelector(".scoreDisplay").style.display = "inline-block"
+        document.querySelector(".leader").style.display = "block"
         
     }
 
@@ -822,6 +827,7 @@ function winner(){
         // document.querySelector("footer").style.paddingTop = "325px";
         getUsers()
         document.querySelector(".scoreDisplay").style.display = "inline-block"
+        document.querySelector(".leader").style.display = "block"
        
         
     }
@@ -849,6 +855,7 @@ function winner(){
         // document.querySelector("footer").style.paddingTop = "325px";
         getUsers()
         document.querySelector(".scoreDisplay").style.display = "inline-block"
+        document.querySelector(".leader").style.display = "block"
         
     }
    
@@ -864,7 +871,7 @@ async function fetchPostUsers() {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name: nameIn.value, score: leaderBoard }),
+      body: JSON.stringify({ name: nameIn.value[0].toUpperCase() + nameIn.value.slice(1), score: leaderBoard }),
     });
     let data = await response.json();
     console.log("post data", data);
