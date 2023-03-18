@@ -782,6 +782,7 @@ function winner(){
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
         document.querySelector("footer").style.paddingTop = "325px";
+        getUsers()
         document.querySelector(".scoreDisplay").style.display = "inline-block"
         
     }
