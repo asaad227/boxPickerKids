@@ -876,23 +876,21 @@ async function fetchPostUsers() {
     let response = await fetch(`http://localhost:5000/game`, {
       method: "GET",
     });
-
-    
     let data = await response.json();
     const {payload} = data;
-        
-    const sorted = Object.entries(payload).sort((a, b)=> b[1].score - a[1].score);
-    console.log(sorted)
+    console.log(payload)
     var nameP = document.querySelector(".nameP");
     var scoreP = document.querySelector(".scoreP")
     var nam; var total
     for(let i = 0; i < 10; i++){
+        // sort need under the loop area
+        const sorted = Object.entries(payload).sort((a, b)=> b[1].score - a[1].score);
         var divN = document.createElement("div");
         var divS = document.createElement("div");
         nam = nameP.appendChild(divN);
         total = scoreP.appendChild(divS)
-            nam.innerHTML = sorted[i][1].name;
-            total.innerHTML = sorted[i][1].score;
+            nam.innerHTML = `${sorted[i][1].name}`;
+            total.innerHTML = `${sorted[i][1].score}`;
         
     }
     }
