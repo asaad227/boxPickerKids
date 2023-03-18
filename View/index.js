@@ -54,7 +54,7 @@ var leaderBoard = 0;
 var num = 3;
 var gameMode = "Easy";
 var users;
-var playerNumber;
+
 
 document.addEventListener("click", function(event){
  
@@ -91,22 +91,25 @@ document.addEventListener("click", function(event){
         // score.innerHTML = `Score: ${total}`;
        
         if(nameIn.value === ""){
-         getUsers() 
+       alert("Please enter your name!!")
+       }
+       if(nameIn.value !== ""){
+        playerName.innerHTML = `Player Name: ${nameIn.value}`
+        level.innerHTML = `Level: ${game}`;
+        mainDiv.className = "mainDiv1";
+        divBox.style.display = "initial";
+        abra.style.display = "none";
+        start.className = "start1";
+         modeDisplay.style.display = "flex";
+         modeDisplay.innerHTML = `Game mode: ${gameMode}`
+        container.className = "containerChnage";
+        runningTotal.innerHTML = `Score: ${leaderBoard}`
+        
+        console.log(gameMode, "play")
        }
 
-       playerName.innerHTML = `Player Name: ${nameIn.value}`
   
-        level.innerHTML = `Level: ${game}`;
-       mainDiv.className = "mainDiv1";
-       divBox.style.display = "initial";
-       abra.style.display = "none";
-       start.className = "start1";
-        modeDisplay.style.display = "flex";
-        modeDisplay.innerHTML = `Game mode: ${gameMode}`
-       container.className = "containerChnage";
-       runningTotal.innerHTML = `Score: ${leaderBoard}`
-       
-       console.log(gameMode, "play")
+      
       }
       if(event.target === easy){
         const audio = new Audio;
@@ -876,14 +879,8 @@ async function fetchPostUsers() {
 
     
     let data = await response.json();
-    if(data.length < 0){
-        console.log("not ready")
-    }else{
-        const {payload} = data;
-        //if no input for player name 
+    const {payload} = data;
         
-    playerName.innerHTML =`Player Name: Player${payload.length + 1}` 
-    console.log(payload[0].score, playerNumber)
     const sorted = Object.entries(payload).sort((a, b)=> b[1].score - a[1].score);
     console.log(sorted)
     var nameP = document.querySelector(".nameP");
@@ -902,6 +899,6 @@ async function fetchPostUsers() {
     
  
 
-  }
+  
 
 
