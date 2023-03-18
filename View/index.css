@@ -331,3 +331,22 @@ footer {
   to {background-image: url(./gif/espeon.gif);}
   
 }
+.scoreDisplay{
+  display: none;
+}
+
+
+td, th {
+  border: 1px solid gold;
+  padding: 10px;
+
+}
+
+table {
+  border-collapse: collapse;
+  width: 40%;
+}
+
+th {
+  height: 20px;
+}

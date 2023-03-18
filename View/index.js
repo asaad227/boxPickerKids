@@ -41,7 +41,9 @@ const darkMode1 = document.querySelector(".darkMode1");
 const whiteMode1 = document.querySelector(".whiteMode1");
 const nameIn = document.querySelector(".nameIn");
 const playerName = document.querySelector(".playerName");
-const runningTotal = document.querySelector(".total")
+const runningTotal = document.querySelector(".total");
+const dataStore = document.querySelector(".dataStore");
+const hide = document.querySelector(".hide");
 // create box pick option for the player
 var pickBox = 9;
 let result= [];
@@ -51,9 +53,10 @@ var total = 0;
 var leaderBoard = 0;
 var num = 3;
 var gameMode = "Easy";
+var users;
 
 document.addEventListener("click", function(event){
-    getUsers()
+ 
     if(event.target === darkMode || event.target === darkMode1 ){
         console.log("darkMode")
         const audio = new Audio;
@@ -96,6 +99,7 @@ document.addEventListener("click", function(event){
         modeDisplay.innerHTML = `Game mode: ${gameMode}`
        container.className = "containerChnage";
        runningTotal.innerHTML = `Score: ${leaderBoard}`
+       
        console.log(gameMode, "play")
       }
       if(event.target === easy){
@@ -137,6 +141,8 @@ document.addEventListener("click", function(event){
        location.reload()
     
     }
+
+   
     //keep pick box counter on display 
     let remender = pickBox - count.length;
     remainingBox.innerHTML = `Pick left: ${remender }`
@@ -611,10 +617,14 @@ function winner(){
         document.querySelector("body").style.backgroundColor ="cadetblue";
         document.querySelector(".modeDisplay").style.display = "none";
         document.querySelector("footer").style.paddingTop = "325px";
+        getUsers()
+        document.querySelector(".scoreDisplay").style.display = "inline-block"
+       
+        
     }
 
     if(total === topScore){
-        runningTotal.innerHTML = `Score: ${leaderBoard}`
+        runningTotal.innerHTML = `Score: ${leaderBoard}` 
         fetchPostUsers()
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
@@ -636,6 +646,10 @@ function winner(){
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
         document.querySelector("footer").style.paddingTop = "325px";
+        getUsers()
+        document.querySelector(".scoreDisplay").style.display = "inline-block"
+        
+        
     }
 
 }
@@ -673,6 +687,8 @@ function winner(){
     if(total < topScore){
         runningTotal.innerHTML = `Score: ${leaderBoard}`
         fetchPostUsers()
+       
+        
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
@@ -693,11 +709,17 @@ function winner(){
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
         document.querySelector("footer").style.paddingTop = "325px";
+        getUsers()
+        document.querySelector(".scoreDisplay").style.display = "inline-block"
+       
+        
     }
 
     if(total === topScore){
         runningTotal.innerHTML = `Score: ${leaderBoard}`
         fetchPostUsers()
+    
+       
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
@@ -718,6 +740,10 @@ function winner(){
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
         document.querySelector("footer").style.paddingTop = "325px";
+        getUsers()
+        document.querySelector(".scoreDisplay").style.display = "inline-block"
+        
+        
     }
    
 
@@ -731,8 +757,9 @@ function winner(){
     total = result.reduce((acc, curr)=> acc+curr, 0);
     runningTotal.innerHTML = `Score: ${leaderBoard}`
     if(total > topScore){
-
         fetchPostUsers()
+     
+        
         const audio = new Audio;
         audio.src ="./Audio/mixkit-ethereal-fairy-win-sound-2019.wav"
         audio.play()
@@ -755,10 +782,14 @@ function winner(){
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
         document.querySelector("footer").style.paddingTop = "325px";
+        document.querySelector(".scoreDisplay").style.display = "inline-block"
+        
     }
 
     if(total < topScore){
         fetchPostUsers()
+    
+    
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
@@ -779,10 +810,16 @@ function winner(){
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
         document.querySelector("footer").style.paddingTop = "325px";
+        getUsers()
+        document.querySelector(".scoreDisplay").style.display = "inline-block"
+       
+        
     }
 
     if(total === topScore){
         fetchPostUsers()
+
+       
         const audio = new Audio;
         audio.src ="./Audio/mixkit-circus-lose-2030.wav"
         audio.play()
@@ -800,6 +837,9 @@ function winner(){
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
         document.querySelector("footer").style.paddingTop = "325px";
+        getUsers()
+        document.querySelector(".scoreDisplay").style.display = "inline-block"
+        
     }
    
 
@@ -821,10 +861,31 @@ async function fetchPostUsers() {
   }
 
   async function getUsers() {
-  
     let response = await fetch(`http://localhost:5000/game`, {
       method: "GET",
     });
+
+    
     let data = await response.json();
-    console.log(data)
+    if(data.length < 0){
+        console.log("not ready")
+    }else{
+        const {payload} = data;
+    console.log(payload[0].score)
+    var nameP = document.querySelector(".nameP");
+    var scoreP = document.querySelector(".scoreP")
+    var nam; var total
+    for(let i = 0; i < payload.length; i++){
+        var divN = document.createElement("div");
+        var divS = document.createElement("div");
+        nam = nameP.appendChild(divN);
+        total = scoreP.appendChild(divS)
+            nam.innerHTML = payload[i].name;
+            total.innerHTML = payload[i].score;
+        
+    }
+    }
+    
+ 
+
   }
