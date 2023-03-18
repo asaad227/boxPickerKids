@@ -54,6 +54,7 @@ var leaderBoard = 0;
 var num = 3;
 var gameMode = "Easy";
 var users;
+var playerNumber;
 
 document.addEventListener("click", function(event){
  
@@ -88,9 +89,14 @@ document.addEventListener("click", function(event){
         // const total = result.reduce((acc, curr)=> acc + curr, 0);
         const game = round;
         // score.innerHTML = `Score: ${total}`;
+       
+        if(nameIn.value === ""){
+         getUsers() 
+       }
+
+       playerName.innerHTML = `Player Name: ${nameIn.value}`
+  
         level.innerHTML = `Level: ${game}`;
-        //change class name so change display according to page need
-    playerName.innerHTML = `Player Name: ${nameIn.value}`
        mainDiv.className = "mainDiv1";
        divBox.style.display = "initial";
        abra.style.display = "none";
@@ -616,7 +622,7 @@ function winner(){
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue";
         document.querySelector(".modeDisplay").style.display = "none";
-        document.querySelector("footer").style.paddingTop = "325px";
+        // document.querySelector("footer").style.paddingTop = "325px";
         getUsers()
         document.querySelector(".scoreDisplay").style.display = "inline-block"
        
@@ -645,7 +651,7 @@ function winner(){
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
-        document.querySelector("footer").style.paddingTop = "325px";
+        // document.querySelector("footer").style.paddingTop = "325px";
         getUsers()
         document.querySelector(".scoreDisplay").style.display = "inline-block"
         
@@ -708,7 +714,7 @@ function winner(){
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
-        document.querySelector("footer").style.paddingTop = "325px";
+        // document.querySelector("footer").style.paddingTop = "325px";
         getUsers()
         document.querySelector(".scoreDisplay").style.display = "inline-block"
        
@@ -739,7 +745,7 @@ function winner(){
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
-        document.querySelector("footer").style.paddingTop = "325px";
+        // document.querySelector("footer").style.paddingTop = "325px";
         getUsers()
         document.querySelector(".scoreDisplay").style.display = "inline-block"
         
@@ -781,7 +787,7 @@ function winner(){
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
-        document.querySelector("footer").style.paddingTop = "325px";
+        // document.querySelector("footer").style.paddingTop = "325px";
         getUsers()
         document.querySelector(".scoreDisplay").style.display = "inline-block"
         
@@ -810,7 +816,7 @@ function winner(){
         // document.querySelector(".abra1").style.display = "none"
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
-        document.querySelector("footer").style.paddingTop = "325px";
+        // document.querySelector("footer").style.paddingTop = "325px";
         getUsers()
         document.querySelector(".scoreDisplay").style.display = "inline-block"
        
@@ -837,7 +843,7 @@ function winner(){
         document.querySelector(".mainDiv1").style.backgroundImage = "url(./gif/aipom_pokemon.gif)";
         document.querySelector("body").style.backgroundColor ="cadetblue"
         document.querySelector(".modeDisplay").style.display = "none";
-        document.querySelector("footer").style.paddingTop = "325px";
+        // document.querySelector("footer").style.paddingTop = "325px";
         getUsers()
         document.querySelector(".scoreDisplay").style.display = "inline-block"
         
@@ -861,6 +867,8 @@ async function fetchPostUsers() {
     console.log("post data", data);
   }
 
+ 
+
   async function getUsers() {
     let response = await fetch(`http://localhost:5000/game`, {
       method: "GET",
@@ -872,17 +880,22 @@ async function fetchPostUsers() {
         console.log("not ready")
     }else{
         const {payload} = data;
-    console.log(payload[0].score)
+        //if no input for player name 
+        
+    playerName.innerHTML =`Player Name: Player${payload.length + 1}` 
+    console.log(payload[0].score, playerNumber)
+    const sorted = Object.entries(payload).sort((a, b)=> b[1].score - a[1].score);
+    console.log(sorted)
     var nameP = document.querySelector(".nameP");
     var scoreP = document.querySelector(".scoreP")
     var nam; var total
-    for(let i = 0; i < payload.length; i++){
+    for(let i = 0; i < 10; i++){
         var divN = document.createElement("div");
         var divS = document.createElement("div");
         nam = nameP.appendChild(divN);
         total = scoreP.appendChild(divS)
-            nam.innerHTML = payload[i].name;
-            total.innerHTML = payload[i].score;
+            nam.innerHTML = sorted[i][1].name;
+            total.innerHTML = sorted[i][1].score;
         
     }
     }
@@ -890,3 +903,5 @@ async function fetchPostUsers() {
  
 
   }
+
+

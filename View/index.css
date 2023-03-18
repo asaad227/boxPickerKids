@@ -339,6 +339,10 @@ footer {
 td, th {
   border: 1px solid gold;
   padding: 10px;
+  font-size: 26px;
+  color: cadetblue;
+  font-weight: bold;
+  font-style: oblique;
 
 }
 
